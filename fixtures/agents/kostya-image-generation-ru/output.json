@@ -1,0 +1,451 @@
+{
+  "data": {
+    "concepts": [
+      {
+        "concept_name": "Большая цифра",
+        "best_for": {
+          "platforms": [
+            "telegram",
+            "vk"
+          ],
+          "asset_types": [
+            "tg_cover",
+            "carousel"
+          ]
+        },
+        "headline_suggestion": "3 точки...",
+        "composition": "Крупная цифра...",
+        "ru_trigger": "цифра",
+        "prompts": {
+          "main": "minimal composition...",
+          "variations": [
+            "minimal composition...",
+            "minimal composition..."
+          ],
+          "negative": "лишний текст,...",
+          "prompt_style": "universal"
+        },
+        "designer_brief": {
+          "layout_notes": [
+            "Сетка: 12...",
+            "CTA в...",
+            "Главный акцент..."
+          ],
+          "typography_notes": [
+            "1 шрифт...",
+            "Короткие строки",
+            "Контрастный заголовок"
+          ],
+          "editable_layers": [
+            "HEADLINE",
+            "SUBHEAD",
+            "CTA",
+            "LOGO"
+          ],
+          "export_versions": [
+            "1:1",
+            "9:16",
+            "16:9"
+          ]
+        },
+        "do_and_dont": {
+          "do": [
+            "Держать 1...",
+            "Оставить место..."
+          ],
+          "dont": [
+            "Перегружать текстом",
+            "Использовать реальные..."
+          ]
+        }
+      },
+      {
+        "concept_name": "До/после",
+        "best_for": {
+          "platforms": [
+            "vk",
+            "youtube_shorts"
+          ],
+          "asset_types": [
+            "carousel",
+            "thumbnail"
+          ]
+        },
+        "headline_suggestion": "3 точки...",
+        "composition": "Экран разделён...",
+        "ru_trigger": "до-после",
+        "prompts": {
+          "main": "split screen...",
+          "variations": [
+            "split screen...",
+            "split screen..."
+          ],
+          "negative": "лишний текст,...",
+          "prompt_style": "universal"
+        },
+        "designer_brief": {
+          "layout_notes": [
+            "Сетка: 12...",
+            "CTA в...",
+            "Главный акцент..."
+          ],
+          "typography_notes": [
+            "1 шрифт...",
+            "Короткие строки",
+            "Контрастный заголовок"
+          ],
+          "editable_layers": [
+            "HEADLINE",
+            "SUBHEAD",
+            "CTA",
+            "LOGO"
+          ],
+          "export_versions": [
+            "1:1",
+            "9:16",
+            "16:9"
+          ]
+        },
+        "do_and_dont": {
+          "do": [
+            "Держать 1...",
+            "Оставить место..."
+          ],
+          "dont": [
+            "Перегружать текстом",
+            "Использовать реальные..."
+          ]
+        }
+      },
+      {
+        "concept_name": "Схема из...",
+        "best_for": {
+          "platforms": [
+            "youtube_shorts",
+            "instagram_reels"
+          ],
+          "asset_types": [
+            "thumbnail",
+            "tg_cover"
+          ]
+        },
+        "headline_suggestion": "3 точки...",
+        "composition": "Три блока...",
+        "ru_trigger": "простота",
+        "prompts": {
+          "main": "three step...",
+          "variations": [
+            "three step...",
+            "three step..."
+          ],
+          "negative": "лишний текст,...",
+          "prompt_style": "universal"
+        },
+        "designer_brief": {
+          "layout_notes": [
+            "Сетка: 12...",
+            "CTA в...",
+            "Главный акцент..."
+          ],
+          "typography_notes": [
+            "1 шрифт...",
+            "Короткие строки",
+            "Контрастный заголовок"
+          ],
+          "editable_layers": [
+            "HEADLINE",
+            "SUBHEAD",
+            "CTA",
+            "LOGO"
+          ],
+          "export_versions": [
+            "1:1",
+            "9:16",
+            "16:9"
+          ]
+        },
+        "do_and_dont": {
+          "do": [
+            "Держать 1...",
+            "Оставить место..."
+          ],
+          "dont": [
+            "Перегружать текстом",
+            "Использовать реальные..."
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:59.054Z",
+      "input_quality": "medium",
+      "needsReview": false,
+      "limitations": [],
+      "assumptions": [
+        "RU аудитория.",
+        "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+      ],
+      "quality_checks": {
+        "concepts_count_ok": true,
+        "within_max_words": true,
+        "no_logos_respected": true,
+        "no_faces_respected": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "kostya-image-generation-ru",
+    "generated_at": "2026-02-05T14:05:59.055Z",
+    "run_id": "883328c5-d5b7-4add-bdf0-581d72b5a765",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "niche": "AgentOS/автоматизация",
+      "goal": "leads",
+      "platforms": [
+        "telegram",
+        "vk",
+        "youtube_shorts",
+        "instagram_reels",
+        "tiktok",
+        "rutube"
+      ],
+      "asset_types": [
+        "tg_cover",
+        "carousel",
+        "thumbnail"
+      ],
+      "brand_style": {
+        "vibe": "tech",
+        "colors_hint": "",
+        "typography_hint": ""
+      },
+      "content_inputs": {
+        "headline": "3 точки роста за 7 дней",
+        "key_points": [],
+        "offer": "",
+        "cta": ""
+      },
+      "constraints": {
+        "concepts_count": 3,
+        "prompt_style": "universal",
+        "no_faces": false,
+        "no_logos": true,
+        "max_words": 200
+      },
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [
+      "RU аудитория.",
+      "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+    ],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "concepts": [
+          {
+            "concept_name": "Большая цифра",
+            "best_for": {
+              "platforms": [
+                "telegram",
+                "vk"
+              ],
+              "asset_types": [
+                "tg_cover",
+                "carousel"
+              ]
+            },
+            "headline_suggestion": "3 точки...",
+            "composition": "Крупная цифра...",
+            "ru_trigger": "цифра",
+            "prompts": {
+              "main": "minimal composition...",
+              "variations": [
+                "minimal composition...",
+                "minimal composition..."
+              ],
+              "negative": "лишний текст,...",
+              "prompt_style": "universal"
+            },
+            "designer_brief": {
+              "layout_notes": [
+                "Сетка: 12...",
+                "CTA в...",
+                "Главный акцент..."
+              ],
+              "typography_notes": [
+                "1 шрифт...",
+                "Короткие строки",
+                "Контрастный заголовок"
+              ],
+              "editable_layers": [
+                "HEADLINE",
+                "SUBHEAD",
+                "CTA",
+                "LOGO"
+              ],
+              "export_versions": [
+                "1:1",
+                "9:16",
+                "16:9"
+              ]
+            },
+            "do_and_dont": {
+              "do": [
+                "Держать 1...",
+                "Оставить место..."
+              ],
+              "dont": [
+                "Перегружать текстом",
+                "Использовать реальные..."
+              ]
+            }
+          },
+          {
+            "concept_name": "До/после",
+            "best_for": {
+              "platforms": [
+                "vk",
+                "youtube_shorts"
+              ],
+              "asset_types": [
+                "carousel",
+                "thumbnail"
+              ]
+            },
+            "headline_suggestion": "3 точки...",
+            "composition": "Экран разделён...",
+            "ru_trigger": "до-после",
+            "prompts": {
+              "main": "split screen...",
+              "variations": [
+                "split screen...",
+                "split screen..."
+              ],
+              "negative": "лишний текст,...",
+              "prompt_style": "universal"
+            },
+            "designer_brief": {
+              "layout_notes": [
+                "Сетка: 12...",
+                "CTA в...",
+                "Главный акцент..."
+              ],
+              "typography_notes": [
+                "1 шрифт...",
+                "Короткие строки",
+                "Контрастный заголовок"
+              ],
+              "editable_layers": [
+                "HEADLINE",
+                "SUBHEAD",
+                "CTA",
+                "LOGO"
+              ],
+              "export_versions": [
+                "1:1",
+                "9:16",
+                "16:9"
+              ]
+            },
+            "do_and_dont": {
+              "do": [
+                "Держать 1...",
+                "Оставить место..."
+              ],
+              "dont": [
+                "Перегружать текстом",
+                "Использовать реальные..."
+              ]
+            }
+          },
+          {
+            "concept_name": "Схема из...",
+            "best_for": {
+              "platforms": [
+                "youtube_shorts",
+                "instagram_reels"
+              ],
+              "asset_types": [
+                "thumbnail",
+                "tg_cover"
+              ]
+            },
+            "headline_suggestion": "3 точки...",
+            "composition": "Три блока...",
+            "ru_trigger": "простота",
+            "prompts": {
+              "main": "three step...",
+              "variations": [
+                "three step...",
+                "three step..."
+              ],
+              "negative": "лишний текст,...",
+              "prompt_style": "universal"
+            },
+            "designer_brief": {
+              "layout_notes": [
+                "Сетка: 12...",
+                "CTA в...",
+                "Главный акцент..."
+              ],
+              "typography_notes": [
+                "1 шрифт...",
+                "Короткие строки",
+                "Контрастный заголовок"
+              ],
+              "editable_layers": [
+                "HEADLINE",
+                "SUBHEAD",
+                "CTA",
+                "LOGO"
+              ],
+              "export_versions": [
+                "1:1",
+                "9:16",
+                "16:9"
+              ]
+            },
+            "do_and_dont": {
+              "do": [
+                "Держать 1...",
+                "Оставить место..."
+              ],
+              "dont": [
+                "Перегружать текстом",
+                "Использовать реальные..."
+              ]
+            }
+          }
+        ]
+      },
+      "recommended_next_agents": [
+        "hariton-viral-hooks-ru",
+        "irina-content-ideation-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

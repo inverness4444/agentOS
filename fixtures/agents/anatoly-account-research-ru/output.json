@@ -1,0 +1,130 @@
+{
+  "data": {
+    "account_card": {
+      "company_name": "Тестовая компания",
+      "primary_url": "",
+      "discovered_channels": {},
+      "what_they_sell": "",
+      "who_they_sell_to": "",
+      "avg_check_estimate": null,
+      "top_personalization_hooks": [],
+      "pain_hypotheses": [],
+      "quick_wins": [],
+      "public_contacts": {
+        "email": "",
+        "phone": "",
+        "messengers": [],
+        "widgets": []
+      },
+      "needsReview": true
+    },
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.971Z",
+      "web_stats": {
+        "requests_made": 0,
+        "blocked_count": 0,
+        "errors_count": 0,
+        "duration_ms": 0,
+        "sources_used": {
+          "yandex": 0,
+          "wb": 0,
+          "ozon": 0,
+          "vk": 0,
+          "tg": 0,
+          "websites": 0
+        },
+        "top_errors": [],
+        "warnings": [],
+        "trace_summary": {}
+      },
+      "proof_items": [],
+      "limitations": [
+        "Нет веб-доступа для проверки источников."
+      ],
+      "assumptions": []
+    }
+  },
+  "meta": {
+    "agent_id": "anatoly-account-research-ru",
+    "generated_at": "2026-02-05T14:05:58.971Z",
+    "run_id": "5d4fb275-3a85-4a38-9e91-2deb43e2fe92",
+    "mode": "quick",
+    "input_echo": {
+      "mode": "quick",
+      "has_web_access": false,
+      "max_web_requests": 25,
+      "company_name": "Тестовая компания",
+      "company_domain_or_url": "",
+      "geo": "",
+      "channel_focus": "All",
+      "product_context": "AgentOS — маркетплейс и оркестрация ИИ-агентов для бизнеса: лидоген, поддержка, контент, аналитика, автоматизация процессов",
+      "require_proof": true,
+      "recency_days": 365,
+      "allow_placeholders_if_blocked": true,
+      "exclude_sources": [],
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [
+      "Нет веб-доступа для проверки источников."
+    ],
+    "assumptions": [],
+    "handoff": {
+      "type": "account_card",
+      "version": "1.0",
+      "entities": {
+        "company_name": "Тестовая компания",
+        "discovered_channels": {},
+        "hooks": [],
+        "pains": [],
+        "proof_items": []
+      },
+      "recommended_next_agents": [
+        "leonid-outreach-dm-ru",
+        "emelyan-cold-email-ru",
+        "boris-bdr-operator-ru"
+      ],
+      "compat": [
+        "leonid-outreach-dm-ru",
+        "emelyan-cold-email-ru",
+        "boris-bdr-operator-ru"
+      ]
+    },
+    "web_stats": {
+      "requests_made": 0,
+      "blocked_count": 0,
+      "errors_count": 0,
+      "duration_ms": 0,
+      "sources_used": {
+        "yandex": 0,
+        "wb": 0,
+        "ozon": 0,
+        "vk": 0,
+        "tg": 0,
+        "websites": 0
+      },
+      "top_errors": [],
+      "warnings": [],
+      "trace_summary": {}
+    },
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    },
+    "trace_id": "5d4fb275-3a85-4a38-9e91-2deb43e2fe92"
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

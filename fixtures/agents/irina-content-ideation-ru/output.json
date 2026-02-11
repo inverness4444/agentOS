@@ -1,0 +1,696 @@
+{
+  "data": {
+    "pillars": [
+      {
+        "pillar_name": "Разбор...",
+        "description": "Показываем...",
+        "lead_mechanism": "разбор",
+        "best_platforms": [
+          "telegram"
+        ]
+      },
+      {
+        "pillar_name": "Ошибка...",
+        "description": "Одна...",
+        "lead_mechanism": "мини-аудит",
+        "best_platforms": [
+          "vk"
+        ]
+      },
+      {
+        "pillar_name": "До/после",
+        "description": "Показываем...",
+        "lead_mechanism": "кейс",
+        "best_platforms": [
+          "youtube_shorts"
+        ]
+      },
+      {
+        "pillar_name": "Сколько...",
+        "description": "Простой...",
+        "lead_mechanism": "калькулятор",
+        "best_platforms": [
+          "instagram_reels"
+        ]
+      },
+      {
+        "pillar_name": "Чек-лист/шаблон",
+        "description": "Даем...",
+        "lead_mechanism": "шаблон",
+        "best_platforms": [
+          "tiktok"
+        ]
+      },
+      {
+        "pillar_name": "Разбор...",
+        "description": "Разбираем...",
+        "lead_mechanism": "разбор",
+        "best_platforms": [
+          "rutube"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "t-001",
+        "pillar": "Разбор...",
+        "topic_title": "Разбор:...",
+        "hook": "3...",
+        "format": "tg_post",
+        "platforms": [
+          "telegram"
+        ],
+        "outline": [
+          "Контекст...",
+          "Проблема/ошибка",
+          "Что...",
+          "Пиши..."
+        ],
+        "cta": "Пиши...",
+        "why_leads": "Лид...",
+        "difficulty": "easy",
+        "reuse": "high"
+      },
+      {
+        "id": "t-002",
+        "pillar": "Ошибка...",
+        "topic_title": "Ошибка...",
+        "hook": "Минус...",
+        "format": "vk_post",
+        "platforms": [
+          "vk"
+        ],
+        "outline": [
+          "Покажи...",
+          "Покажи...",
+          "1...",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "medium",
+        "reuse": "mid"
+      },
+      {
+        "id": "t-003",
+        "pillar": "До/после",
+        "topic_title": "До/после:...",
+        "hook": "Почему...",
+        "format": "shorts_script",
+        "platforms": [
+          "youtube_shorts"
+        ],
+        "outline": [
+          "Боль/конфликт",
+          "2–3...",
+          "Мини-доказательство",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "hard",
+        "reuse": "high"
+      },
+      {
+        "id": "t-004",
+        "pillar": "Сколько...",
+        "topic_title": "Сколько...",
+        "hook": "1...",
+        "format": "reels_script",
+        "platforms": [
+          "instagram_reels"
+        ],
+        "outline": [
+          "Вопрос...",
+          "Короткий...",
+          "Шаги",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "easy",
+        "reuse": "mid"
+      },
+      {
+        "id": "t-005",
+        "pillar": "Чек-лист/шаблон",
+        "topic_title": "Чек-лист:...",
+        "hook": "Где...",
+        "format": "shorts_script",
+        "platforms": [
+          "tiktok"
+        ],
+        "outline": [
+          "Формула/чек-лист",
+          "Пояснение",
+          "Пример",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "medium",
+        "reuse": "high"
+      },
+      {
+        "id": "t-006",
+        "pillar": "Разбор...",
+        "topic_title": "Мини-аудит:...",
+        "hook": "Сколько...",
+        "format": "shorts_script",
+        "platforms": [
+          "rutube"
+        ],
+        "outline": [
+          "Контекст...",
+          "Проблема/ошибка",
+          "Что...",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "hard",
+        "reuse": "mid"
+      },
+      {
+        "id": "t-007",
+        "pillar": "Разбор...",
+        "topic_title": "Разбор...",
+        "hook": "Разбор...",
+        "format": "tg_post",
+        "platforms": [
+          "telegram"
+        ],
+        "outline": [
+          "Покажи...",
+          "Покажи...",
+          "1...",
+          "ТГ:..."
+        ],
+        "cta": "ТГ:...",
+        "why_leads": "Лид...",
+        "difficulty": "easy",
+        "reuse": "high"
+      },
+      {
+        "id": "t-008",
+        "pillar": "Ошибка...",
+        "topic_title": "Кейс:...",
+        "hook": "До/после:...",
+        "format": "vk_post",
+        "platforms": [
+          "vk"
+        ],
+        "outline": [
+          "Боль/конфликт",
+          "2–3...",
+          "Мини-доказательство",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "medium",
+        "reuse": "mid"
+      },
+      {
+        "id": "t-009",
+        "pillar": "До/после",
+        "topic_title": "Миф/факт:...",
+        "hook": "2...",
+        "format": "shorts_script",
+        "platforms": [
+          "youtube_shorts"
+        ],
+        "outline": [
+          "Вопрос...",
+          "Короткий...",
+          "Шаги",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "hard",
+        "reuse": "high"
+      },
+      {
+        "id": "t-010",
+        "pillar": "Сколько...",
+        "topic_title": "Инструмент...",
+        "hook": "Как...",
+        "format": "reels_script",
+        "platforms": [
+          "instagram_reels"
+        ],
+        "outline": [
+          "Формула/чек-лист",
+          "Пояснение",
+          "Пример",
+          "Коммент..."
+        ],
+        "cta": "Коммент...",
+        "why_leads": "Лид...",
+        "difficulty": "easy",
+        "reuse": "mid"
+      }
+    ],
+    "cta_bank": {
+      "dm_cta": [
+        "Напиши...",
+        "В...",
+        "Напиши...",
+        "В...",
+        "Напиши...",
+        "В...",
+        "Напиши...",
+        "В...",
+        "Напиши...",
+        "В..."
+      ],
+      "tg_cta": [
+        "Пиши...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:...",
+        "ТГ:..."
+      ],
+      "landing_cta": [
+        "Ссылка...",
+        "Забери...",
+        "Запишись...",
+        "Скачай...",
+        "Оставь...",
+        "Получить...",
+        "Запросить...",
+        "Оставить...",
+        "Записаться...",
+        "Получить..."
+      ],
+      "comment_cta": [
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент...",
+        "Коммент..."
+      ]
+    },
+    "meta": {
+      "generated_at": "2026-02-05T14:05:59.009Z",
+      "input_quality": "medium",
+      "needsReview": false,
+      "limitations": [],
+      "assumptions": [
+        "RU аудитория.",
+        "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+      ],
+      "quality_checks": {
+        "no_fluff": true,
+        "topics_count_ok": false,
+        "within_max_words": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "irina-content-ideation-ru",
+    "generated_at": "2026-02-05T14:05:59.009Z",
+    "run_id": "98a329a7-45e1-4876-a679-e3605e538d14",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "niche": "AgentOS/автоматизация",
+      "goal": "leads",
+      "platforms": [
+        "telegram",
+        "vk",
+        "youtube_shorts",
+        "instagram_reels",
+        "tiktok",
+        "rutube"
+      ],
+      "audience": {
+        "geo": "RU",
+        "persona": "",
+        "temperature": "cold"
+      },
+      "brand_voice": "straight",
+      "content_assets": {
+        "offers": [],
+        "proofs": [],
+        "кейсы": []
+      },
+      "constraints": {
+        "topics_min": 30,
+        "topics_max": 30,
+        "no_fluff": true,
+        "max_words": 250
+      },
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [
+      "RU аудитория.",
+      "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+    ],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "pillars": [
+          {
+            "pillar_name": "Разбор...",
+            "description": "Показываем...",
+            "lead_mechanism": "разбор",
+            "best_platforms": [
+              "telegram"
+            ]
+          },
+          {
+            "pillar_name": "Ошибка...",
+            "description": "Одна...",
+            "lead_mechanism": "мини-аудит",
+            "best_platforms": [
+              "vk"
+            ]
+          },
+          {
+            "pillar_name": "До/после",
+            "description": "Показываем...",
+            "lead_mechanism": "кейс",
+            "best_platforms": [
+              "youtube_shorts"
+            ]
+          },
+          {
+            "pillar_name": "Сколько...",
+            "description": "Простой...",
+            "lead_mechanism": "калькулятор",
+            "best_platforms": [
+              "instagram_reels"
+            ]
+          },
+          {
+            "pillar_name": "Чек-лист/шаблон",
+            "description": "Даем...",
+            "lead_mechanism": "шаблон",
+            "best_platforms": [
+              "tiktok"
+            ]
+          },
+          {
+            "pillar_name": "Разбор...",
+            "description": "Разбираем...",
+            "lead_mechanism": "разбор",
+            "best_platforms": [
+              "rutube"
+            ]
+          }
+        ],
+        "topics": [
+          {
+            "id": "t-001",
+            "pillar": "Разбор...",
+            "topic_title": "Разбор:...",
+            "hook": "3...",
+            "format": "tg_post",
+            "platforms": [
+              "telegram"
+            ],
+            "outline": [
+              "Контекст...",
+              "Проблема/ошибка",
+              "Что...",
+              "Пиши..."
+            ],
+            "cta": "Пиши...",
+            "why_leads": "Лид...",
+            "difficulty": "easy",
+            "reuse": "high"
+          },
+          {
+            "id": "t-002",
+            "pillar": "Ошибка...",
+            "topic_title": "Ошибка...",
+            "hook": "Минус...",
+            "format": "vk_post",
+            "platforms": [
+              "vk"
+            ],
+            "outline": [
+              "Покажи...",
+              "Покажи...",
+              "1...",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "medium",
+            "reuse": "mid"
+          },
+          {
+            "id": "t-003",
+            "pillar": "До/после",
+            "topic_title": "До/после:...",
+            "hook": "Почему...",
+            "format": "shorts_script",
+            "platforms": [
+              "youtube_shorts"
+            ],
+            "outline": [
+              "Боль/конфликт",
+              "2–3...",
+              "Мини-доказательство",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "hard",
+            "reuse": "high"
+          },
+          {
+            "id": "t-004",
+            "pillar": "Сколько...",
+            "topic_title": "Сколько...",
+            "hook": "1...",
+            "format": "reels_script",
+            "platforms": [
+              "instagram_reels"
+            ],
+            "outline": [
+              "Вопрос...",
+              "Короткий...",
+              "Шаги",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "easy",
+            "reuse": "mid"
+          },
+          {
+            "id": "t-005",
+            "pillar": "Чек-лист/шаблон",
+            "topic_title": "Чек-лист:...",
+            "hook": "Где...",
+            "format": "shorts_script",
+            "platforms": [
+              "tiktok"
+            ],
+            "outline": [
+              "Формула/чек-лист",
+              "Пояснение",
+              "Пример",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "medium",
+            "reuse": "high"
+          },
+          {
+            "id": "t-006",
+            "pillar": "Разбор...",
+            "topic_title": "Мини-аудит:...",
+            "hook": "Сколько...",
+            "format": "shorts_script",
+            "platforms": [
+              "rutube"
+            ],
+            "outline": [
+              "Контекст...",
+              "Проблема/ошибка",
+              "Что...",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "hard",
+            "reuse": "mid"
+          },
+          {
+            "id": "t-007",
+            "pillar": "Разбор...",
+            "topic_title": "Разбор...",
+            "hook": "Разбор...",
+            "format": "tg_post",
+            "platforms": [
+              "telegram"
+            ],
+            "outline": [
+              "Покажи...",
+              "Покажи...",
+              "1...",
+              "ТГ:..."
+            ],
+            "cta": "ТГ:...",
+            "why_leads": "Лид...",
+            "difficulty": "easy",
+            "reuse": "high"
+          },
+          {
+            "id": "t-008",
+            "pillar": "Ошибка...",
+            "topic_title": "Кейс:...",
+            "hook": "До/после:...",
+            "format": "vk_post",
+            "platforms": [
+              "vk"
+            ],
+            "outline": [
+              "Боль/конфликт",
+              "2–3...",
+              "Мини-доказательство",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "medium",
+            "reuse": "mid"
+          },
+          {
+            "id": "t-009",
+            "pillar": "До/после",
+            "topic_title": "Миф/факт:...",
+            "hook": "2...",
+            "format": "shorts_script",
+            "platforms": [
+              "youtube_shorts"
+            ],
+            "outline": [
+              "Вопрос...",
+              "Короткий...",
+              "Шаги",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "hard",
+            "reuse": "high"
+          },
+          {
+            "id": "t-010",
+            "pillar": "Сколько...",
+            "topic_title": "Инструмент...",
+            "hook": "Как...",
+            "format": "reels_script",
+            "platforms": [
+              "instagram_reels"
+            ],
+            "outline": [
+              "Формула/чек-лист",
+              "Пояснение",
+              "Пример",
+              "Коммент..."
+            ],
+            "cta": "Коммент...",
+            "why_leads": "Лид...",
+            "difficulty": "easy",
+            "reuse": "mid"
+          }
+        ],
+        "cta_bank": {
+          "dm_cta": [
+            "Напиши...",
+            "В...",
+            "Напиши...",
+            "В...",
+            "Напиши...",
+            "В...",
+            "Напиши...",
+            "В...",
+            "Напиши...",
+            "В..."
+          ],
+          "tg_cta": [
+            "Пиши...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:...",
+            "ТГ:..."
+          ],
+          "landing_cta": [
+            "Ссылка...",
+            "Забери...",
+            "Запишись...",
+            "Скачай...",
+            "Оставь...",
+            "Получить...",
+            "Запросить...",
+            "Оставить...",
+            "Записаться...",
+            "Получить..."
+          ],
+          "comment_cta": [
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент...",
+            "Коммент..."
+          ]
+        }
+      },
+      "recommended_next_agents": [
+        "hariton-viral-hooks-ru",
+        "kostya-image-generation-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

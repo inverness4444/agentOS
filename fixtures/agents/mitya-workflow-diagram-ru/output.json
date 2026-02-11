@@ -1,0 +1,397 @@
+{
+  "data": {
+    "diagram": {
+      "title": "Как работает AgentOS для автоматизации лидогенерации",
+      "blocks": [
+        {
+          "id": "b1",
+          "label": "Запрос",
+          "description": "Входящий запрос клиента.",
+          "type": "start"
+        },
+        {
+          "id": "b2",
+          "label": "Разбор задачи",
+          "description": "Фиксируем цель и контекст.",
+          "type": "process"
+        },
+        {
+          "id": "b3",
+          "label": "Подбор агентов",
+          "description": "Составляем состав агентов.",
+          "type": "process"
+        },
+        {
+          "id": "b4",
+          "label": "Настройка",
+          "description": "Сценарии и правила.",
+          "type": "process"
+        },
+        {
+          "id": "b5",
+          "label": "Выполнение",
+          "description": "Автоматическая работа.",
+          "type": "process"
+        },
+        {
+          "id": "b6",
+          "label": "Контроль",
+          "description": "Проверка качества.",
+          "type": "decision"
+        }
+      ],
+      "edges": [
+        {
+          "from": "b1",
+          "to": "b2",
+          "label": "описание"
+        },
+        {
+          "from": "b2",
+          "to": "b3",
+          "label": "требования"
+        },
+        {
+          "from": "b3",
+          "to": "b4",
+          "label": "настройка"
+        },
+        {
+          "from": "b4",
+          "to": "b5",
+          "label": "запуск"
+        },
+        {
+          "from": "b5",
+          "to": "b6",
+          "label": "проверка"
+        }
+      ],
+      "mermaid": "flowchart LR b1([Запрос]) b2[Разбор задачи] b3[Подбор...",
+      "graph_json": {
+        "nodes": [
+          {
+            "id": "b1",
+            "label": "Запрос",
+            "type": "start",
+            "description": "Входящий запрос клиента."
+          },
+          {
+            "id": "b2",
+            "label": "Разбор задачи",
+            "type": "process",
+            "description": "Фиксируем цель и контекст."
+          },
+          {
+            "id": "b3",
+            "label": "Подбор агентов",
+            "type": "process",
+            "description": "Составляем состав агентов."
+          },
+          {
+            "id": "b4",
+            "label": "Настройка",
+            "type": "process",
+            "description": "Сценарии и правила."
+          },
+          {
+            "id": "b5",
+            "label": "Выполнение",
+            "type": "process",
+            "description": "Автоматическая работа."
+          },
+          {
+            "id": "b6",
+            "label": "Контроль",
+            "type": "decision",
+            "description": "Проверка качества."
+          }
+        ],
+        "edges": [
+          {
+            "from": "b1",
+            "to": "b2",
+            "label": "описание"
+          },
+          {
+            "from": "b2",
+            "to": "b3",
+            "label": "требования"
+          },
+          {
+            "from": "b3",
+            "to": "b4",
+            "label": "настройка"
+          },
+          {
+            "from": "b4",
+            "to": "b5",
+            "label": "запуск"
+          },
+          {
+            "from": "b5",
+            "to": "b6",
+            "label": "проверка"
+          }
+        ]
+      }
+    },
+    "landing_text": {
+      "headline": "Схема: как работает AgentOS для автоматизации...",
+      "body": "Эта схема показывает, как AgentOS для...",
+      "bullet_benefits": [
+        "Показывает логику процесса без воды",
+        "Снимает вопросы о прозрачности",
+        "Подходит для лендинга и презентации",
+        "Легко адаптировать под нишу",
+        "Фокус на результате"
+      ]
+    },
+    "deck_script": {
+      "bullets": [
+        "Стартуем с запроса клиента и фиксируем...",
+        "Дальше — разбор задачи и контекста",
+        "Подбираем нужных агентов/этапы",
+        "Настраиваем правила и сценарии",
+        "Запускаем выполнение",
+        "Контроль качества встроен",
+        "Результат фиксируется и передается клиенту"
+      ],
+      "speaker_notes": "Коротко пройти по этапам и показать,..."
+    },
+    "meta": {
+      "generated_at": "2026-02-05T14:05:59.064Z",
+      "input_quality": "medium",
+      "needsReview": false,
+      "limitations": [],
+      "assumptions": [
+        "RU аудитория.",
+        "Тип схемы: agentos_how_it_works."
+      ],
+      "quality_checks": {
+        "max_blocks_ok": true,
+        "within_max_words": true,
+        "no_fluff": true,
+        "has_mermaid_if_requested": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "mitya-workflow-diagram-ru",
+    "generated_at": "2026-02-05T14:05:59.064Z",
+    "run_id": "b636b3b7-c572-4f46-9341-0c76deef40df",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "diagram_type": "agentos_how_it_works",
+      "niche": "AgentOS",
+      "context": {
+        "product_one_liner": "AgentOS для автоматизации лидогенерации",
+        "target_segments": [],
+        "channels": []
+      },
+      "constraints": {
+        "max_blocks": 6,
+        "max_words": 200,
+        "no_fluff": true
+      },
+      "output_format": "both",
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [
+      "RU аудитория.",
+      "Тип схемы: agentos_how_it_works."
+    ],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "diagram": {
+          "title": "Как работает AgentOS для автоматизации лидогенерации",
+          "blocks": [
+            {
+              "id": "b1",
+              "label": "Запрос",
+              "description": "Входящий запрос клиента.",
+              "type": "start"
+            },
+            {
+              "id": "b2",
+              "label": "Разбор задачи",
+              "description": "Фиксируем цель и контекст.",
+              "type": "process"
+            },
+            {
+              "id": "b3",
+              "label": "Подбор агентов",
+              "description": "Составляем состав агентов.",
+              "type": "process"
+            },
+            {
+              "id": "b4",
+              "label": "Настройка",
+              "description": "Сценарии и правила.",
+              "type": "process"
+            },
+            {
+              "id": "b5",
+              "label": "Выполнение",
+              "description": "Автоматическая работа.",
+              "type": "process"
+            },
+            {
+              "id": "b6",
+              "label": "Контроль",
+              "description": "Проверка качества.",
+              "type": "decision"
+            }
+          ],
+          "edges": [
+            {
+              "from": "b1",
+              "to": "b2",
+              "label": "описание"
+            },
+            {
+              "from": "b2",
+              "to": "b3",
+              "label": "требования"
+            },
+            {
+              "from": "b3",
+              "to": "b4",
+              "label": "настройка"
+            },
+            {
+              "from": "b4",
+              "to": "b5",
+              "label": "запуск"
+            },
+            {
+              "from": "b5",
+              "to": "b6",
+              "label": "проверка"
+            }
+          ],
+          "mermaid": "flowchart LR b1([Запрос]) b2[Разбор задачи] b3[Подбор...",
+          "graph_json": {
+            "nodes": [
+              {
+                "id": "b1",
+                "label": "Запрос",
+                "type": "start",
+                "description": "Входящий запрос клиента."
+              },
+              {
+                "id": "b2",
+                "label": "Разбор задачи",
+                "type": "process",
+                "description": "Фиксируем цель и контекст."
+              },
+              {
+                "id": "b3",
+                "label": "Подбор агентов",
+                "type": "process",
+                "description": "Составляем состав агентов."
+              },
+              {
+                "id": "b4",
+                "label": "Настройка",
+                "type": "process",
+                "description": "Сценарии и правила."
+              },
+              {
+                "id": "b5",
+                "label": "Выполнение",
+                "type": "process",
+                "description": "Автоматическая работа."
+              },
+              {
+                "id": "b6",
+                "label": "Контроль",
+                "type": "decision",
+                "description": "Проверка качества."
+              }
+            ],
+            "edges": [
+              {
+                "from": "b1",
+                "to": "b2",
+                "label": "описание"
+              },
+              {
+                "from": "b2",
+                "to": "b3",
+                "label": "требования"
+              },
+              {
+                "from": "b3",
+                "to": "b4",
+                "label": "настройка"
+              },
+              {
+                "from": "b4",
+                "to": "b5",
+                "label": "запуск"
+              },
+              {
+                "from": "b5",
+                "to": "b6",
+                "label": "проверка"
+              }
+            ]
+          }
+        },
+        "landing_text": {
+          "headline": "Схема: как работает AgentOS для автоматизации...",
+          "body": "Эта схема показывает, как AgentOS для...",
+          "bullet_benefits": [
+            "Показывает логику процесса без воды",
+            "Снимает вопросы о прозрачности",
+            "Подходит для лендинга и презентации",
+            "Легко адаптировать под нишу",
+            "Фокус на результате"
+          ]
+        },
+        "deck_script": {
+          "bullets": [
+            "Стартуем с запроса клиента и фиксируем...",
+            "Дальше — разбор задачи и контекста",
+            "Подбираем нужных агентов/этапы",
+            "Настраиваем правила и сценарии",
+            "Запускаем выполнение",
+            "Контроль качества встроен",
+            "Результат фиксируется и передается клиенту"
+          ],
+          "speaker_notes": "Коротко пройти по этапам и показать,..."
+        }
+      },
+      "recommended_next_agents": [
+        "kostya-image-generation-ru",
+        "irina-content-ideation-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

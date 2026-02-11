@@ -1,0 +1,1397 @@
+{
+  "data": {
+    "formats": [
+      {
+        "format_name": "Разбор...",
+        "best_platforms": [
+          "instagram_reels"
+        ],
+        "hook_pattern": "ошибка...",
+        "conflict": "Тема...",
+        "script_structure": {
+          "hook_0_3s": "ошибка...",
+          "value_3_15s": [
+            "Назови...",
+            "Покажи,..."
+          ],
+          "proof_15_30s": [
+            "Скрин..."
+          ],
+          "cta": "Коммент..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "instagram_reels": {
+            "pacing_note": "очень...",
+            "caption_style": "крупные...",
+            "cta_style": "короткий...",
+            "typical_length_sec": "15–30"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "easy",
+        "reuse_potential": "high",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "3...",
+        "best_platforms": [
+          "tiktok"
+        ],
+        "hook_pattern": "до/после...",
+        "conflict": "Тема...",
+        "script_structure": {
+          "hook_0_3s": "до/после...",
+          "value_3_15s": [
+            "Шаг...",
+            "Шаг..."
+          ],
+          "proof_15_30s": [
+            "Мини-кейс..."
+          ],
+          "cta": "Сохрани..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "tiktok": {
+            "pacing_note": "быстрый...",
+            "caption_style": "живой...",
+            "cta_style": "CTA...",
+            "typical_length_sec": "12–25"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "medium",
+        "reuse_potential": "mid",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "До/после",
+        "best_platforms": [
+          "youtube_shorts"
+        ],
+        "hook_pattern": "До/после...",
+        "conflict": "Без...",
+        "script_structure": {
+          "hook_0_3s": "До/после...",
+          "value_3_15s": [
+            "Покажи...",
+            "Покажи..."
+          ],
+          "proof_15_30s": [
+            "Скрин/кадр..."
+          ],
+          "cta": "Коммент..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "youtube_shorts": {
+            "pacing_note": "ровный...",
+            "caption_style": "тезисы...",
+            "cta_style": "подписка/сохранить",
+            "typical_length_sec": "20–35"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "hard",
+        "reuse_potential": "high",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Миф/факт",
+        "best_platforms": [
+          "rutube"
+        ],
+        "hook_pattern": "Миф:...",
+        "conflict": "Популярный...",
+        "script_structure": {
+          "hook_0_3s": "Миф:...",
+          "value_3_15s": [
+            "Озвучь...",
+            "Разбей..."
+          ],
+          "proof_15_30s": [
+            "Фраза..."
+          ],
+          "cta": "Коммент..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "rutube": {
+            "pacing_note": "чуть...",
+            "caption_style": "простые...",
+            "cta_style": "спокойный...",
+            "typical_length_sec": "25–45"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "easy",
+        "reuse_potential": "mid",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Разбор...",
+        "best_platforms": [
+          "vk_clips"
+        ],
+        "hook_pattern": "Кейс...",
+        "conflict": "Без...",
+        "script_structure": {
+          "hook_0_3s": "Кейс...",
+          "value_3_15s": [
+            "Контекст.",
+            "Действие."
+          ],
+          "proof_15_30s": [
+            "Кадр..."
+          ],
+          "cta": "В..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "vk_clips": {
+            "pacing_note": "спокойный...",
+            "caption_style": "локально...",
+            "cta_style": "коммент/сохранить",
+            "typical_length_sec": "15–30"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "medium",
+        "reuse_potential": "high",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Ответ...",
+        "best_platforms": [
+          "instagram_reels"
+        ],
+        "hook_pattern": "Вопрос...",
+        "conflict": "Сомнения...",
+        "script_structure": {
+          "hook_0_3s": "Вопрос...",
+          "value_3_15s": [
+            "Цитата...",
+            "Короткий..."
+          ],
+          "proof_15_30s": [
+            "Скрин..."
+          ],
+          "cta": "Пиши..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "instagram_reels": {
+            "pacing_note": "очень...",
+            "caption_style": "крупные...",
+            "cta_style": "короткий...",
+            "typical_length_sec": "15–30"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "hard",
+        "reuse_potential": "mid",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Анти-совет",
+        "best_platforms": [
+          "tiktok"
+        ],
+        "hook_pattern": "Не...",
+        "conflict": "Типичный...",
+        "script_structure": {
+          "hook_0_3s": "Не...",
+          "value_3_15s": [
+            "Покажи...",
+            "Почему..."
+          ],
+          "proof_15_30s": [
+            "Короткий..."
+          ],
+          "cta": "Коммент..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "tiktok": {
+            "pacing_note": "быстрый...",
+            "caption_style": "живой...",
+            "cta_style": "CTA...",
+            "typical_length_sec": "12–25"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "easy",
+        "reuse_potential": "high",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Сравнение...",
+        "best_platforms": [
+          "youtube_shorts"
+        ],
+        "hook_pattern": "Сравню...",
+        "conflict": "Непонятно,...",
+        "script_structure": {
+          "hook_0_3s": "Сравню...",
+          "value_3_15s": [
+            "Подход...",
+            "Подход..."
+          ],
+          "proof_15_30s": [
+            "Пример..."
+          ],
+          "cta": "Коммент..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "youtube_shorts": {
+            "pacing_note": "ровный...",
+            "caption_style": "тезисы...",
+            "cta_style": "подписка/сохранить",
+            "typical_length_sec": "20–35"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "medium",
+        "reuse_potential": "mid",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Разбор...",
+        "best_platforms": [
+          "rutube"
+        ],
+        "hook_pattern": "Один...",
+        "conflict": "Экран...",
+        "script_structure": {
+          "hook_0_3s": "Один...",
+          "value_3_15s": [
+            "Покажи...",
+            "Выдели..."
+          ],
+          "proof_15_30s": [
+            "Скрин..."
+          ],
+          "cta": "Скинь..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "rutube": {
+            "pacing_note": "чуть...",
+            "caption_style": "простые...",
+            "cta_style": "спокойный...",
+            "typical_length_sec": "25–45"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "hard",
+        "reuse_potential": "high",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      },
+      {
+        "format_name": "Провал...",
+        "best_platforms": [
+          "vk_clips"
+        ],
+        "hook_pattern": "Я...",
+        "conflict": "Ошибки...",
+        "script_structure": {
+          "hook_0_3s": "Я...",
+          "value_3_15s": [
+            "Что...",
+            "Почему..."
+          ],
+          "proof_15_30s": [
+            "Факт/цифра."
+          ],
+          "cta": "Сохрани,..."
+        },
+        "why_it_works_ru": [
+          "Прямой...",
+          "Короткие..."
+        ],
+        "adaptation_notes": [
+          "Адаптация...",
+          "Триггер:...",
+          "Подставь..."
+        ],
+        "platform_tweaks": {
+          "vk_clips": {
+            "pacing_note": "спокойный...",
+            "caption_style": "локально...",
+            "cta_style": "коммент/сохранить",
+            "typical_length_sec": "15–30"
+          }
+        },
+        "expected_effect": {
+          "views_estimate": "Рост...",
+          "note": "estimate"
+        },
+        "difficulty": "easy",
+        "reuse_potential": "mid",
+        "do_and_dont": {
+          "do": [
+            "Ставь...",
+            "Покажи..."
+          ],
+          "dont": [
+            "Не...",
+            "Не..."
+          ]
+        }
+      }
+    ],
+    "recommendations": {
+      "top_5_to_start": [
+        "Разбор...",
+        "3...",
+        "До/после",
+        "Миф/факт",
+        "Разбор..."
+      ],
+      "content_mix_week": [
+        {
+          "day": "D1",
+          "format_name": "Разбор...",
+          "platform": "instagram_reels"
+        },
+        {
+          "day": "D2",
+          "format_name": "3...",
+          "platform": "tiktok"
+        },
+        {
+          "day": "D3",
+          "format_name": "До/после",
+          "platform": "youtube_shorts"
+        },
+        {
+          "day": "D4",
+          "format_name": "Миф/факт",
+          "platform": "rutube"
+        },
+        {
+          "day": "D5",
+          "format_name": "Разбор...",
+          "platform": "vk_clips"
+        },
+        {
+          "day": "D6",
+          "format_name": "Ответ...",
+          "platform": "instagram_reels"
+        },
+        {
+          "day": "D7",
+          "format_name": "Анти-совет",
+          "platform": "tiktok"
+        }
+      ],
+      "hooks_bank": [
+        "Стоп....",
+        "Сразу...",
+        "Вот...",
+        "Если...",
+        "Короткий...",
+        "Покажу...",
+        "Не...",
+        "Вот..."
+      ],
+      "hooks_by_platform": {
+        "instagram_reels": [
+          "Стоп....",
+          "Сразу...",
+          "Где...",
+          "Покажу..."
+        ],
+        "tiktok": [
+          "Сразу...",
+          "Я...",
+          "Почему...",
+          "Покажу..."
+        ],
+        "youtube_shorts": [
+          "Обещание...",
+          "3...",
+          "Покажу...",
+          "Где..."
+        ],
+        "rutube": [
+          "Спокойно...",
+          "Покажу...",
+          "Что...",
+          "Без..."
+        ],
+        "vk_clips": [
+          "Коротко...",
+          "Вот...",
+          "Сразу...",
+          "Покажу..."
+        ]
+      },
+      "cta_bank": [
+        "Сохрани",
+        "Подпишись",
+        "Коммент...",
+        "Сохрани...",
+        "Подпишись...",
+        "Коммент..."
+      ],
+      "pitfalls_ru": [
+        "Слишком...",
+        "Обещания...",
+        "3–4...",
+        "Слишком...",
+        "Отсутствие...",
+        "Слабый...",
+        "Медленный...",
+        "Перегруженный..."
+      ],
+      "platform_notes": {
+        "instagram_reels": [
+          "Сильный...",
+          "Быстрые..."
+        ],
+        "tiktok": [
+          "Конфликт...",
+          "Личный..."
+        ],
+        "youtube_shorts": [
+          "Обещание...",
+          "Чёткие..."
+        ],
+        "rutube": [
+          "Темп...",
+          "Простые..."
+        ],
+        "vk_clips": [
+          "Локально...",
+          "Меньше..."
+        ]
+      }
+    },
+    "meta": {
+      "generated_at": "2026-02-05T14:05:59.002Z",
+      "input_quality": "medium",
+      "needsReview": false,
+      "limitations": [],
+      "assumptions": [
+        "Длина ролика до 30 сек.",
+        "RU аудитория.",
+        "Платформы: instagram_reels, tiktok, youtube_shorts, rutube, vk_clips."
+      ],
+      "quality_checks": {
+        "within_max_words": true,
+        "no_fluff": true,
+        "formats_count_ok": true,
+        "platforms_supported_ok": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "trofim-shorts-analogs-ru",
+    "generated_at": "2026-02-05T14:05:59.002Z",
+    "run_id": "bd817d84-e9bb-4269-8fef-05edd1671718",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "platforms": [
+        "instagram_reels",
+        "tiktok",
+        "youtube_shorts",
+        "rutube",
+        "vk_clips"
+      ],
+      "platform_priority": [],
+      "niche": "AgentOS/автоматизация",
+      "goal": "views",
+      "audience": {
+        "geo": "RU",
+        "persona": "",
+        "temperature": "cold"
+      },
+      "references": {
+        "transcripts": [],
+        "themes": [
+          "ошибка недели",
+          "до/после"
+        ],
+        "creators": [],
+        "formats_liked": []
+      },
+      "constraints": {
+        "max_formats": 20,
+        "max_words": 450,
+        "no_fluff": true
+      },
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [
+      "Длина ролика до 30 сек.",
+      "RU аудитория.",
+      "Платформы: instagram_reels, tiktok, youtube_shorts, rutube, vk_clips."
+    ],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "formats": [
+          {
+            "format_name": "Разбор...",
+            "best_platforms": [
+              "instagram_reels"
+            ],
+            "hook_pattern": "ошибка...",
+            "conflict": "Тема...",
+            "script_structure": {
+              "hook_0_3s": "ошибка...",
+              "value_3_15s": [
+                "Назови...",
+                "Покажи,..."
+              ],
+              "proof_15_30s": [
+                "Скрин..."
+              ],
+              "cta": "Коммент..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "instagram_reels": {
+                "pacing_note": "очень...",
+                "caption_style": "крупные...",
+                "cta_style": "короткий...",
+                "typical_length_sec": "15–30"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "easy",
+            "reuse_potential": "high",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "3...",
+            "best_platforms": [
+              "tiktok"
+            ],
+            "hook_pattern": "до/после...",
+            "conflict": "Тема...",
+            "script_structure": {
+              "hook_0_3s": "до/после...",
+              "value_3_15s": [
+                "Шаг...",
+                "Шаг..."
+              ],
+              "proof_15_30s": [
+                "Мини-кейс..."
+              ],
+              "cta": "Сохрани..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "tiktok": {
+                "pacing_note": "быстрый...",
+                "caption_style": "живой...",
+                "cta_style": "CTA...",
+                "typical_length_sec": "12–25"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "medium",
+            "reuse_potential": "mid",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "До/после",
+            "best_platforms": [
+              "youtube_shorts"
+            ],
+            "hook_pattern": "До/после...",
+            "conflict": "Без...",
+            "script_structure": {
+              "hook_0_3s": "До/после...",
+              "value_3_15s": [
+                "Покажи...",
+                "Покажи..."
+              ],
+              "proof_15_30s": [
+                "Скрин/кадр..."
+              ],
+              "cta": "Коммент..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "youtube_shorts": {
+                "pacing_note": "ровный...",
+                "caption_style": "тезисы...",
+                "cta_style": "подписка/сохранить",
+                "typical_length_sec": "20–35"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "hard",
+            "reuse_potential": "high",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Миф/факт",
+            "best_platforms": [
+              "rutube"
+            ],
+            "hook_pattern": "Миф:...",
+            "conflict": "Популярный...",
+            "script_structure": {
+              "hook_0_3s": "Миф:...",
+              "value_3_15s": [
+                "Озвучь...",
+                "Разбей..."
+              ],
+              "proof_15_30s": [
+                "Фраза..."
+              ],
+              "cta": "Коммент..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "rutube": {
+                "pacing_note": "чуть...",
+                "caption_style": "простые...",
+                "cta_style": "спокойный...",
+                "typical_length_sec": "25–45"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "easy",
+            "reuse_potential": "mid",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Разбор...",
+            "best_platforms": [
+              "vk_clips"
+            ],
+            "hook_pattern": "Кейс...",
+            "conflict": "Без...",
+            "script_structure": {
+              "hook_0_3s": "Кейс...",
+              "value_3_15s": [
+                "Контекст.",
+                "Действие."
+              ],
+              "proof_15_30s": [
+                "Кадр..."
+              ],
+              "cta": "В..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "vk_clips": {
+                "pacing_note": "спокойный...",
+                "caption_style": "локально...",
+                "cta_style": "коммент/сохранить",
+                "typical_length_sec": "15–30"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "medium",
+            "reuse_potential": "high",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Ответ...",
+            "best_platforms": [
+              "instagram_reels"
+            ],
+            "hook_pattern": "Вопрос...",
+            "conflict": "Сомнения...",
+            "script_structure": {
+              "hook_0_3s": "Вопрос...",
+              "value_3_15s": [
+                "Цитата...",
+                "Короткий..."
+              ],
+              "proof_15_30s": [
+                "Скрин..."
+              ],
+              "cta": "Пиши..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "instagram_reels": {
+                "pacing_note": "очень...",
+                "caption_style": "крупные...",
+                "cta_style": "короткий...",
+                "typical_length_sec": "15–30"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "hard",
+            "reuse_potential": "mid",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Анти-совет",
+            "best_platforms": [
+              "tiktok"
+            ],
+            "hook_pattern": "Не...",
+            "conflict": "Типичный...",
+            "script_structure": {
+              "hook_0_3s": "Не...",
+              "value_3_15s": [
+                "Покажи...",
+                "Почему..."
+              ],
+              "proof_15_30s": [
+                "Короткий..."
+              ],
+              "cta": "Коммент..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "tiktok": {
+                "pacing_note": "быстрый...",
+                "caption_style": "живой...",
+                "cta_style": "CTA...",
+                "typical_length_sec": "12–25"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "easy",
+            "reuse_potential": "high",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Сравнение...",
+            "best_platforms": [
+              "youtube_shorts"
+            ],
+            "hook_pattern": "Сравню...",
+            "conflict": "Непонятно,...",
+            "script_structure": {
+              "hook_0_3s": "Сравню...",
+              "value_3_15s": [
+                "Подход...",
+                "Подход..."
+              ],
+              "proof_15_30s": [
+                "Пример..."
+              ],
+              "cta": "Коммент..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "youtube_shorts": {
+                "pacing_note": "ровный...",
+                "caption_style": "тезисы...",
+                "cta_style": "подписка/сохранить",
+                "typical_length_sec": "20–35"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "medium",
+            "reuse_potential": "mid",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Разбор...",
+            "best_platforms": [
+              "rutube"
+            ],
+            "hook_pattern": "Один...",
+            "conflict": "Экран...",
+            "script_structure": {
+              "hook_0_3s": "Один...",
+              "value_3_15s": [
+                "Покажи...",
+                "Выдели..."
+              ],
+              "proof_15_30s": [
+                "Скрин..."
+              ],
+              "cta": "Скинь..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "rutube": {
+                "pacing_note": "чуть...",
+                "caption_style": "простые...",
+                "cta_style": "спокойный...",
+                "typical_length_sec": "25–45"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "hard",
+            "reuse_potential": "high",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          },
+          {
+            "format_name": "Провал...",
+            "best_platforms": [
+              "vk_clips"
+            ],
+            "hook_pattern": "Я...",
+            "conflict": "Ошибки...",
+            "script_structure": {
+              "hook_0_3s": "Я...",
+              "value_3_15s": [
+                "Что...",
+                "Почему..."
+              ],
+              "proof_15_30s": [
+                "Факт/цифра."
+              ],
+              "cta": "Сохрани,..."
+            },
+            "why_it_works_ru": [
+              "Прямой...",
+              "Короткие..."
+            ],
+            "adaptation_notes": [
+              "Адаптация...",
+              "Триггер:...",
+              "Подставь..."
+            ],
+            "platform_tweaks": {
+              "vk_clips": {
+                "pacing_note": "спокойный...",
+                "caption_style": "локально...",
+                "cta_style": "коммент/сохранить",
+                "typical_length_sec": "15–30"
+              }
+            },
+            "expected_effect": {
+              "views_estimate": "Рост...",
+              "note": "estimate"
+            },
+            "difficulty": "easy",
+            "reuse_potential": "mid",
+            "do_and_dont": {
+              "do": [
+                "Ставь...",
+                "Покажи..."
+              ],
+              "dont": [
+                "Не...",
+                "Не..."
+              ]
+            }
+          }
+        ],
+        "recommendations": {
+          "top_5_to_start": [
+            "Разбор...",
+            "3...",
+            "До/после",
+            "Миф/факт",
+            "Разбор..."
+          ],
+          "content_mix_week": [
+            {
+              "day": "D1",
+              "format_name": "Разбор...",
+              "platform": "instagram_reels"
+            },
+            {
+              "day": "D2",
+              "format_name": "3...",
+              "platform": "tiktok"
+            },
+            {
+              "day": "D3",
+              "format_name": "До/после",
+              "platform": "youtube_shorts"
+            },
+            {
+              "day": "D4",
+              "format_name": "Миф/факт",
+              "platform": "rutube"
+            },
+            {
+              "day": "D5",
+              "format_name": "Разбор...",
+              "platform": "vk_clips"
+            },
+            {
+              "day": "D6",
+              "format_name": "Ответ...",
+              "platform": "instagram_reels"
+            },
+            {
+              "day": "D7",
+              "format_name": "Анти-совет",
+              "platform": "tiktok"
+            }
+          ],
+          "hooks_bank": [
+            "Стоп....",
+            "Сразу...",
+            "Вот...",
+            "Если...",
+            "Короткий...",
+            "Покажу...",
+            "Не...",
+            "Вот..."
+          ],
+          "hooks_by_platform": {
+            "instagram_reels": [
+              "Стоп....",
+              "Сразу...",
+              "Где...",
+              "Покажу..."
+            ],
+            "tiktok": [
+              "Сразу...",
+              "Я...",
+              "Почему...",
+              "Покажу..."
+            ],
+            "youtube_shorts": [
+              "Обещание...",
+              "3...",
+              "Покажу...",
+              "Где..."
+            ],
+            "rutube": [
+              "Спокойно...",
+              "Покажу...",
+              "Что...",
+              "Без..."
+            ],
+            "vk_clips": [
+              "Коротко...",
+              "Вот...",
+              "Сразу...",
+              "Покажу..."
+            ]
+          },
+          "cta_bank": [
+            "Сохрани",
+            "Подпишись",
+            "Коммент...",
+            "Сохрани...",
+            "Подпишись...",
+            "Коммент..."
+          ],
+          "pitfalls_ru": [
+            "Слишком...",
+            "Обещания...",
+            "3–4...",
+            "Слишком...",
+            "Отсутствие...",
+            "Слабый...",
+            "Медленный...",
+            "Перегруженный..."
+          ],
+          "platform_notes": {
+            "instagram_reels": [
+              "Сильный...",
+              "Быстрые..."
+            ],
+            "tiktok": [
+              "Конфликт...",
+              "Личный..."
+            ],
+            "youtube_shorts": [
+              "Обещание...",
+              "Чёткие..."
+            ],
+            "rutube": [
+              "Темп...",
+              "Простые..."
+            ],
+            "vk_clips": [
+              "Локально...",
+              "Меньше..."
+            ]
+          }
+        }
+      },
+      "recommended_next_agents": [
+        "hariton-viral-hooks-ru",
+        "pavel-reels-analysis-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "channel": "telegram",
+  "anatoly_output_json": {
+    "account_card": {
+      "company_name": "Test Co",
+      "primary_url": "https://example.com",
+      "discovered_channels": {
+        "website": "https://example.com"
+      },
+      "what_they_sell": "SaaS",
+      "who_they_sell_to": "B2B",
+      "avg_check_estimate": null,
+      "top_personalization_hooks": [
+        "Сильный оффер"
+      ],
+      "pain_hypotheses": [
+        "Долгие ответы клиентам"
+      ],
+      "quick_wins": [
+        "Чат-бот"
+      ],
+      "public_contacts": {
+        "email": "info@example.com",
+        "phone": "+7 900 000-00-00",
+        "messengers": [],
+        "widgets": []
+      }
+    },
+    "meta": {
+      "proof_items": []
+    }
+  }
+}

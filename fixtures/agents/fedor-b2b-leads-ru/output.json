@@ -1,0 +1,108 @@
+{
+  "data": {
+    "leads": [],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.976Z",
+      "search_plan": {
+        "queries_used": []
+      },
+      "web_stats": {
+        "requests_made": 0,
+        "blocked_count": 0,
+        "errors_count": 0,
+        "duration_ms": 0,
+        "sources_used": {},
+        "top_errors": [],
+        "warnings": [],
+        "trace_summary": {}
+      },
+      "proof_items": [],
+      "limitations": [
+        "Нет веб-доступа для проверки источников."
+      ],
+      "assumptions": [],
+      "quality_checks": {
+        "no_gray_scraping": true,
+        "no_fabrication": true,
+        "dedupe_ok": true,
+        "prefer_inn_used": false
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "fedor-b2b-leads-ru",
+    "generated_at": "2026-02-05T14:05:58.976Z",
+    "run_id": "a0addfb9-fa91-4cc5-b21c-ee7ae89b9aef",
+    "mode": "quick",
+    "input_echo": {
+      "mode": "quick",
+      "has_web_access": false,
+      "max_web_requests": 40,
+      "industries": [
+        "логистика"
+      ],
+      "geo": "Россия",
+      "source": "multi",
+      "target_count": 3,
+      "require_proof": true,
+      "allow_placeholders_if_blocked": true,
+      "exclude_domains": [],
+      "exclude_names": [],
+      "dedupe_by": "mixed",
+      "prefer_inn": true,
+      "recency_days": 365,
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [
+      "Нет веб-доступа для проверки источников."
+    ],
+    "assumptions": [],
+    "handoff": {
+      "type": "leads_table",
+      "version": "1.0",
+      "entities": {
+        "leads": []
+      },
+      "recommended_next_agents": [
+        "anatoly-account-research-ru",
+        "emelyan-cold-email-ru",
+        "boris-bdr-operator-ru"
+      ],
+      "compat": [
+        "anatoly-account-research-ru",
+        "leonid-outreach-dm-ru",
+        "emelyan-cold-email-ru",
+        "boris-bdr-operator-ru"
+      ]
+    },
+    "web_stats": {
+      "requests_made": 0,
+      "blocked_count": 0,
+      "errors_count": 0,
+      "duration_ms": 0,
+      "sources_used": {},
+      "top_errors": [],
+      "warnings": [],
+      "trace_summary": {}
+    },
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    },
+    "trace_id": "a0addfb9-fa91-4cc5-b21c-ee7ae89b9aef"
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

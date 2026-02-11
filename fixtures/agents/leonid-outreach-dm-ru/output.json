@@ -1,0 +1,247 @@
+{
+  "data": {
+    "dm_pack": {
+      "lead_label": "Test Co",
+      "channel": "telegram",
+      "messages": {
+        "first_message": {
+          "text": "Привет!\nЕсть гипотеза, где можно ускорить процессы без переработок.\nАктуально обсудить?\nМогу скинуть 3 идеи/мини-аудит, если интересно.",
+          "tone": "neutral",
+          "personalization_line": "",
+          "question_line": "Актуально обсудить?",
+          "cta_line": "Могу скинуть 3 идеи/мини-аудит, если интересно.",
+          "grounding_refs": []
+        },
+        "followups": [
+          {
+            "day_offset": 2,
+            "text": "Напомню про сообщение выше. Могу кратко подсветить 2–3 точки для улучшения.",
+            "tone": "neutral",
+            "angle": "reminder",
+            "grounding_refs": []
+          },
+          {
+            "day_offset": 7,
+            "text": "Если полезно, пришлю мини-аудит в 5 пунктов без обязательств.",
+            "tone": "neutral",
+            "angle": "value_drop",
+            "grounding_refs": []
+          }
+        ]
+      },
+      "variants": [
+        {
+          "label": "Test Co",
+          "tone": "neutral",
+          "first_message": {
+            "text": "Привет!\nЕсть гипотеза, где можно ускорить процессы без переработок.\nАктуально обсудить?\nМогу скинуть 3 идеи/мини-аудит, если интересно.",
+            "tone": "neutral",
+            "personalization_line": "",
+            "question_line": "Актуально обсудить?",
+            "cta_line": "Могу скинуть 3 идеи/мини-аудит, если интересно.",
+            "grounding_refs": []
+          },
+          "followups": [
+            {
+              "day_offset": 2,
+              "text": "Напомню про сообщение выше. Могу кратко подсветить 2–3 точки для улучшения.",
+              "tone": "neutral",
+              "angle": "reminder",
+              "grounding_refs": []
+            },
+            {
+              "day_offset": 7,
+              "text": "Если полезно, пришлю мини-аудит в 5 пунктов без обязательств.",
+              "tone": "neutral",
+              "angle": "value_drop",
+              "grounding_refs": []
+            }
+          ]
+        },
+        {
+          "label": "Test Co",
+          "tone": "business",
+          "first_message": {
+            "text": "Добрый день!\nЕсть гипотеза, где можно ускорить процессы без переработок.\nАктуально обсудить?\nМогу скинуть 3 идеи/мини-аудит, если интересно.",
+            "tone": "business",
+            "personalization_line": "",
+            "question_line": "Актуально обсудить?",
+            "cta_line": "Могу скинуть 3 идеи/мини-аудит, если интересно.",
+            "grounding_refs": []
+          },
+          "followups": [
+            {
+              "day_offset": 2,
+              "text": "Коллеги, Напомню про сообщение выше. Могу кратко подсветить 2–3 точки для улучшения.",
+              "tone": "business",
+              "angle": "reminder",
+              "grounding_refs": []
+            },
+            {
+              "day_offset": 7,
+              "text": "Коллеги, Если полезно, пришлю мини-аудит в 5 пунктов без обязательств.",
+              "tone": "business",
+              "angle": "value_drop",
+              "grounding_refs": []
+            }
+          ]
+        },
+        {
+          "label": "Test Co",
+          "tone": "short_hard",
+          "first_message": {
+            "text": "Коротко:\nЕсть гипотеза, где можно ускорить процессы без переработок.\nАктуально обсудить?\nМогу скинуть 3 идеи/мини-аудит, если интересно.",
+            "tone": "short_hard",
+            "personalization_line": "",
+            "question_line": "Актуально обсудить?",
+            "cta_line": "Могу скинуть 3 идеи/мини-аудит, если интересно.",
+            "grounding_refs": []
+          },
+          "followups": [
+            {
+              "day_offset": 2,
+              "text": "Напомню про сообщение выше. Могу кратко подсветить 2–3 точки для улучшения.",
+              "tone": "short_hard",
+              "angle": "reminder",
+              "grounding_refs": []
+            },
+            {
+              "day_offset": 7,
+              "text": "пришлю мини-аудит в 5 пунктов .",
+              "tone": "short_hard",
+              "angle": "value_drop",
+              "grounding_refs": []
+            }
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.979Z",
+      "used_inputs": {
+        "used_anatoly": true,
+        "used_artem": false
+      },
+      "limitations": [],
+      "assumptions": [],
+      "quality_checks": {
+        "no_fluff": true,
+        "within_char_limits": true,
+        "no_fabrication": true,
+        "has_personalization": false
+      },
+      "needsReview": true
+    }
+  },
+  "meta": {
+    "agent_id": "leonid-outreach-dm-ru",
+    "generated_at": "2026-02-05T14:05:58.979Z",
+    "run_id": "f5606017-1b44-462e-9ee0-1f616a9fcd3a",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "channel": "telegram",
+      "tone_pack": "mixed",
+      "goal": "get_reply",
+      "product_name": "AgentOS",
+      "product_one_liner": "автоматизация продаж/поддержки/контента через ИИ-агентов: лиды, ответы, CRM-рутины, репутация",
+      "constraints": {
+        "max_chars_first": 280,
+        "max_chars_followup": 240,
+        "no_links": false
+      },
+      "anatoly_output_json": {
+        "account_card": {
+          "company_name": "Test Co",
+          "primary_url": "https://example.com",
+          "discovered_channels": {
+            "website": "https://example.com"
+          },
+          "what_they_sell": "SaaS",
+          "who_they_sell_to": "B2B",
+          "avg_check_estimate": null,
+          "top_personalization_hooks": [
+            "Сильный оффер"
+          ],
+          "pain_hypotheses": [
+            "Долгие ответы клиентам"
+          ],
+          "quick_wins": [
+            "Чат-бот"
+          ],
+          "public_contacts": {
+            "email": "info@example.com",
+            "phone": "+7 900 000-00-00",
+            "messengers": [],
+            "widgets": []
+          }
+        },
+        "meta": {
+          "proof_items": []
+        }
+      },
+      "artem_output_json": null,
+      "lead_identity": {},
+      "language": "ru"
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "messages_pack",
+      "version": "1.0",
+      "entities": {
+        "lead_label": "Test Co",
+        "channel": "telegram",
+        "messages": {
+          "first_message": {
+            "text": "Привет!\nЕсть гипотеза, где можно ускорить процессы без переработок.\nАктуально обсудить?\nМогу скинуть 3 идеи/мини-аудит, если интересно.",
+            "tone": "neutral",
+            "personalization_line": "",
+            "question_line": "Актуально обсудить?",
+            "cta_line": "Могу скинуть 3 идеи/мини-аудит, если интересно.",
+            "grounding_refs": []
+          },
+          "followups": [
+            {
+              "day_offset": 2,
+              "text": "Напомню про сообщение выше. Могу кратко подсветить 2–3 точки для улучшения.",
+              "tone": "neutral",
+              "angle": "reminder",
+              "grounding_refs": []
+            },
+            {
+              "day_offset": 7,
+              "text": "Если полезно, пришлю мини-аудит в 5 пунктов без обязательств.",
+              "tone": "neutral",
+              "angle": "value_drop",
+              "grounding_refs": []
+            }
+          ]
+        }
+      },
+      "recommended_next_agents": [
+        "boris-bdr-operator-ru"
+      ],
+      "compat": [
+        "boris-bdr-operator-ru"
+      ]
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

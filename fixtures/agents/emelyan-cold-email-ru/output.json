@@ -1,0 +1,432 @@
+{
+  "data": {
+    "email_sequences": [
+      {
+        "sequence_name": "короткая",
+        "emails": [
+          {
+            "day_offset": 0,
+            "subject": "Короткий вопрос",
+            "body": "Привет.\nАктуально обсудить?",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "short",
+            "within_limits": true
+          },
+          {
+            "day_offset": 2,
+            "subject": "Напоминание",
+            "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "short",
+            "within_limits": true
+          },
+          {
+            "day_offset": 5,
+            "subject": "Альтернативный угол",
+            "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "short",
+            "within_limits": true
+          }
+        ],
+        "recommended_send_window": "будни 10:00–12:00",
+        "a_b_tests": {
+          "subjects": [
+            "Короткий вопрос",
+            "Короткий вопрос по процессу",
+            "Можно уточнить один момент?"
+          ],
+          "cta_variants": [
+            "Актуально обсудить?",
+            "Кому адресовать?"
+          ]
+        }
+      },
+      {
+        "sequence_name": "средняя",
+        "emails": [
+          {
+            "day_offset": 0,
+            "subject": "Короткий вопрос",
+            "body": "Добрый день.\nАктуально обсудить?",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "medium",
+            "within_limits": true
+          },
+          {
+            "day_offset": 2,
+            "subject": "Напоминание",
+            "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "medium",
+            "within_limits": true
+          },
+          {
+            "day_offset": 5,
+            "subject": "Альтернативный угол",
+            "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "medium",
+            "within_limits": true
+          }
+        ],
+        "recommended_send_window": "будни 10:00–12:00",
+        "a_b_tests": {
+          "subjects": [
+            "Короткий вопрос",
+            "Короткий вопрос по процессу",
+            "Можно уточнить один момент?"
+          ],
+          "cta_variants": [
+            "Актуально обсудить?",
+            "Кому адресовать?"
+          ]
+        }
+      },
+      {
+        "sequence_name": "жёстко-деловая",
+        "emails": [
+          {
+            "day_offset": 0,
+            "subject": "Короткий вопрос",
+            "body": "Коллеги, добрый день.\nАктуально обсудить?",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "hard_business",
+            "within_limits": true
+          },
+          {
+            "day_offset": 2,
+            "subject": "Напоминание",
+            "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "hard_business",
+            "within_limits": true
+          },
+          {
+            "day_offset": 5,
+            "subject": "Альтернативный угол",
+            "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+            "cta": "Актуально обсудить?",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "hard_business",
+            "within_limits": true
+          },
+          {
+            "day_offset": 9,
+            "subject": "Закрою тред",
+            "body": "Если тема не актуальна, закрою тред — ок.",
+            "cta": "",
+            "bullets": [],
+            "personalization_line": "",
+            "grounding_refs": [],
+            "tone": "hard_business",
+            "within_limits": true
+          }
+        ],
+        "recommended_send_window": "будни 10:00–12:00",
+        "a_b_tests": {
+          "subjects": [
+            "Короткий вопрос",
+            "Короткий вопрос по процессу",
+            "Можно уточнить один момент?"
+          ],
+          "cta_variants": [
+            "Актуально обсудить?",
+            "Кому адресовать?"
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.980Z",
+      "used_inputs": {
+        "used_anatoly": true,
+        "used_artem": false
+      },
+      "limitations": [],
+      "assumptions": [],
+      "quality_checks": {
+        "no_fluff": true,
+        "within_char_limits": true,
+        "no_fabrication": true,
+        "has_personalization": false,
+        "bullets_ok": true
+      },
+      "needsReview": true
+    }
+  },
+  "meta": {
+    "agent_id": "emelyan-cold-email-ru",
+    "generated_at": "2026-02-05T14:05:58.981Z",
+    "run_id": "9b01d75d-2538-4e36-a5b2-b6df2c810252",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "tone_pack": "mixed",
+      "goal": "get_reply",
+      "product_name": "AgentOS",
+      "product_one_liner": "автоматизация продаж/поддержки/контента через ИИ-агентов: лиды, ответы, CRM-рутины, репутация",
+      "constraints": {
+        "max_chars_email": 900,
+        "max_bullets": 3,
+        "no_links": false,
+        "no_attachments": true
+      },
+      "anatoly_output_json": {
+        "account_card": {
+          "company_name": "Test Co",
+          "primary_url": "https://example.com",
+          "discovered_channels": {
+            "website": "https://example.com"
+          },
+          "what_they_sell": "SaaS",
+          "who_they_sell_to": "B2B",
+          "avg_check_estimate": null,
+          "top_personalization_hooks": [
+            "Сильный оффер"
+          ],
+          "pain_hypotheses": [
+            "Долгие ответы клиентам"
+          ],
+          "quick_wins": [
+            "Чат-бот"
+          ],
+          "public_contacts": {
+            "email": "info@example.com",
+            "phone": "+7 900 000-00-00",
+            "messengers": [],
+            "widgets": []
+          }
+        },
+        "meta": {
+          "proof_items": []
+        }
+      },
+      "artem_output_json": null,
+      "recipient_context": {},
+      "language": "ru"
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "messages_pack",
+      "version": "1.0",
+      "entities": {
+        "lead_label": "lead",
+        "channel": "email",
+        "email_sequences": [
+          {
+            "sequence_name": "короткая",
+            "emails": [
+              {
+                "day_offset": 0,
+                "subject": "Короткий вопрос",
+                "body": "Привет.\nАктуально обсудить?",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "short",
+                "within_limits": true
+              },
+              {
+                "day_offset": 2,
+                "subject": "Напоминание",
+                "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "short",
+                "within_limits": true
+              },
+              {
+                "day_offset": 5,
+                "subject": "Альтернативный угол",
+                "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "short",
+                "within_limits": true
+              }
+            ],
+            "recommended_send_window": "будни 10:00–12:00",
+            "a_b_tests": {
+              "subjects": [
+                "Короткий вопрос",
+                "Короткий вопрос по процессу",
+                "Можно уточнить один момент?"
+              ],
+              "cta_variants": [
+                "Актуально обсудить?",
+                "Кому адресовать?"
+              ]
+            }
+          },
+          {
+            "sequence_name": "средняя",
+            "emails": [
+              {
+                "day_offset": 0,
+                "subject": "Короткий вопрос",
+                "body": "Добрый день.\nАктуально обсудить?",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "medium",
+                "within_limits": true
+              },
+              {
+                "day_offset": 2,
+                "subject": "Напоминание",
+                "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "medium",
+                "within_limits": true
+              },
+              {
+                "day_offset": 5,
+                "subject": "Альтернативный угол",
+                "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "medium",
+                "within_limits": true
+              }
+            ],
+            "recommended_send_window": "будни 10:00–12:00",
+            "a_b_tests": {
+              "subjects": [
+                "Короткий вопрос",
+                "Короткий вопрос по процессу",
+                "Можно уточнить один момент?"
+              ],
+              "cta_variants": [
+                "Актуально обсудить?",
+                "Кому адресовать?"
+              ]
+            }
+          },
+          {
+            "sequence_name": "жёстко-деловая",
+            "emails": [
+              {
+                "day_offset": 0,
+                "subject": "Короткий вопрос",
+                "body": "Коллеги, добрый день.\nАктуально обсудить?",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "hard_business",
+                "within_limits": true
+              },
+              {
+                "day_offset": 2,
+                "subject": "Напоминание",
+                "body": "Коротко напоминаю про письмо выше. Могу скинуть 2–3 идеи, если актуально.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "hard_business",
+                "within_limits": true
+              },
+              {
+                "day_offset": 5,
+                "subject": "Альтернативный угол",
+                "body": "Если интересно, могу предложить альтернативный угол (репутация/заявки/контент) и мини-аудит.",
+                "cta": "Актуально обсудить?",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "hard_business",
+                "within_limits": true
+              },
+              {
+                "day_offset": 9,
+                "subject": "Закрою тред",
+                "body": "Если тема не актуальна, закрою тред — ок.",
+                "cta": "",
+                "bullets": [],
+                "personalization_line": "",
+                "grounding_refs": [],
+                "tone": "hard_business",
+                "within_limits": true
+              }
+            ],
+            "recommended_send_window": "будни 10:00–12:00",
+            "a_b_tests": {
+              "subjects": [
+                "Короткий вопрос",
+                "Короткий вопрос по процессу",
+                "Можно уточнить один момент?"
+              ],
+              "cta_variants": [
+                "Актуально обсудить?",
+                "Кому адресовать?"
+              ]
+            }
+          }
+        ]
+      },
+      "recommended_next_agents": [
+        "boris-bdr-operator-ru"
+      ],
+      "compat": [
+        "boris-bdr-operator-ru"
+      ]
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

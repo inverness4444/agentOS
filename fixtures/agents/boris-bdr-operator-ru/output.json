@@ -1,0 +1,221 @@
+{
+  "data": {
+    "bdr_table": [
+      {
+        "lead_id": "12dd51e631bb",
+        "lead_name": "Test Lead",
+        "channel": "TG",
+        "contact": {
+          "website": "https://example.com",
+          "email": null,
+          "phone": "+7 900 000-00-00",
+          "url": null
+        },
+        "city": "Москва",
+        "category": "SaaS",
+        "personalization": "",
+        "message": "Привет. Короткий вопрос. Могу показать 2–3 идеи. Актуально?",
+        "status": "READY",
+        "next_step": "Send follow-up #1",
+        "next_followup_date": "2026-02-07",
+        "source_refs": {
+          "from_maxim": true,
+          "from_fedor": false,
+          "from_artem": false,
+          "from_anatoly": false,
+          "from_leonid": false,
+          "from_emelyan": false
+        },
+        "grounding_refs": [],
+        "needsReview": true,
+        "dedupe_key": "domain:example.com"
+      }
+    ],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.994Z",
+      "stats": {
+        "total_rows": 1,
+        "ready_count": 1,
+        "by_channel": {
+          "TG": 1
+        },
+        "needs_review_count": 1
+      },
+      "limitations": [],
+      "assumptions": [],
+      "needsReview": false,
+      "quality_checks": {
+        "no_fabrication": true,
+        "dedupe_ok": true,
+        "has_messages": true
+      },
+      "export_helpers": {
+        "columns": [
+          "lead_id",
+          "lead_name",
+          "channel",
+          "contact",
+          "city",
+          "category",
+          "personalization",
+          "message",
+          "subject",
+          "status",
+          "next_step",
+          "next_followup_date",
+          "dedupe_key"
+        ],
+        "csv": "lead_id,lead_name,channel,contact,city,category,personalization,message,subject,status,next_step,next_followup_date,dedupe_key\n12dd51e631bb,Test Lead,TG,\"{\"\"website\"\":\"\"https://example.com\"\",\"\"email\"\":null,\"\"phone\"\":\"\"+7 900 000-00-00\"\",\"\"url\"\":null}\",Москва,SaaS,,Привет. Короткий вопрос. Могу показать 2–3 идеи. Актуально?,,READY,Send follow-up #1,2026-02-07,domain:example.com"
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "boris-bdr-operator-ru",
+    "generated_at": "2026-02-05T14:05:58.994Z",
+    "run_id": "928fc14b-3699-48ef-8d16-958d425fbcd9",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "primary_channel": "mixed",
+      "goal": "get_reply",
+      "scheduling": {
+        "followup_days": [
+          2,
+          5,
+          9
+        ],
+        "timezone": "Europe/Berlin"
+      },
+      "defaults": {
+        "status_default": "READY",
+        "max_items": 50
+      },
+      "inputs": {
+        "maxim_leads_json": {
+          "data": {
+            "leads": [
+              {
+                "name": "Test Lead",
+                "website": "https://example.com",
+                "phone": "+7 900 000-00-00",
+                "city": "Москва",
+                "category": "SaaS",
+                "dedupe_key": "domain:example.com",
+                "source": "yandex",
+                "proof_refs": []
+              }
+            ],
+            "meta": {
+              "generated_at": "2026-02-05T14:05:58.965Z"
+            }
+          },
+          "meta": {
+            "agent_id": "maxim-local-leads-ru",
+            "generated_at": "2026-02-05T14:05:58.965Z",
+            "run_id": "fixture",
+            "mode": "quick",
+            "input_echo": {},
+            "quality_checks": {
+              "no_fabrication": true,
+              "within_limits": true,
+              "schema_valid": true,
+              "dedupe_ok": true,
+              "grounding_ok": true
+            },
+            "limitations": [],
+            "assumptions": [],
+            "handoff": {
+              "type": "leads_table",
+              "version": "1.0",
+              "entities": {
+                "leads": []
+              },
+              "recommended_next_agents": [],
+              "compat": [
+                "anatoly-account-research-ru",
+                "leonid-outreach-dm-ru",
+                "emelyan-cold-email-ru",
+                "boris-bdr-operator-ru"
+              ]
+            },
+            "web_stats": null
+          }
+        },
+        "fedor_leads_json": null,
+        "artem_hot_json": null,
+        "anatoly_account_json": null,
+        "leonid_dm_json": null,
+        "emelyan_email_json": null
+      },
+      "mapping_rules": {
+        "prefer_hot_over_cold": true,
+        "prefer_dm_over_email_for_local": true
+      },
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "bdr_queue",
+      "version": "1.0",
+      "entities": {
+        "rows": [
+          {
+            "lead_id": "12dd51e631bb",
+            "lead_name": "Test Lead",
+            "channel": "TG",
+            "contact": {
+              "website": "https://example.com",
+              "email": null,
+              "phone": "+7 900 000-00-00",
+              "url": null
+            },
+            "city": "Москва",
+            "category": "SaaS",
+            "personalization": "",
+            "message": "Привет. Короткий вопрос. Могу показать 2–3 идеи. Актуально?",
+            "status": "READY",
+            "next_step": "Send follow-up #1",
+            "next_followup_date": "2026-02-07",
+            "source_refs": {
+              "from_maxim": true,
+              "from_fedor": false,
+              "from_artem": false,
+              "from_anatoly": false,
+              "from_leonid": false,
+              "from_emelyan": false
+            },
+            "grounding_refs": [],
+            "needsReview": true,
+            "dedupe_key": "domain:example.com"
+          }
+        ]
+      },
+      "recommended_next_agents": [
+        "leonid-outreach-dm-ru",
+        "emelyan-cold-email-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

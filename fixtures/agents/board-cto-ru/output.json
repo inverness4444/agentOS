@@ -1,0 +1,69 @@
+{
+  "data": {
+    "review": {
+      "role": "CTO (Tech)",
+      "feasibility": "средняя",
+      "verdict": "Реализуемо в ограниченном объёме при жёстком приоритете интеграций.",
+      "implementation_risks": [
+        "Недооценка объёма интеграции с текущей CRM.",
+        "Нагрузка на команду поддержки после запуска.",
+        "Риск технического долга при ускоренной разработке."
+      ],
+      "execution_plan": [
+        "Собрать MVP из 2 ключевых сценариев автоматизации.",
+        "Провести нагрузочное тестирование на пилотной группе.",
+        "Подключить мониторинг ошибок и SLA на старте."
+      ],
+      "dependencies": [
+        "Доступ к API CRM",
+        "Выделенный backend инженер"
+      ]
+    },
+    "meta": {
+      "role": "CTO (Tech)",
+      "model_used": "gpt-5.2",
+      "limitations": [],
+      "warnings": []
+    }
+  },
+  "meta": {
+    "agent_id": "board-cto-ru",
+    "generated_at": "2026-02-06T00:00:00.000Z",
+    "run_id": "fixture-board-cto",
+    "mode": "board_review",
+    "input_echo": {},
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "board_review",
+      "version": "1.0",
+      "entities": {
+        "role": "CTO (Tech)",
+        "decision": "средняя",
+        "summary": "Реализуемо в ограниченном объёме при жёстком приоритете интеграций.",
+        "references": {}
+      },
+      "recommended_next_agents": [
+        "board-chair-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

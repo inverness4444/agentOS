@@ -1,0 +1,65 @@
+{
+  "data": {
+    "review": {
+      "role": "CFO (Risk)",
+      "recommendation": "условно_за",
+      "unit_economics_view": "Запуск оправдан, если CAC окупается в пределах 4-6 месяцев.",
+      "financial_risks": [
+        "Рост расходов на внедрение выше планового бюджета.",
+        "Низкая платёжная дисциплина в пилотном сегменте.",
+        "Медленный апсейл при слабой активации."
+      ],
+      "budget_guardrails": [
+        "Лимит затрат на пилот: 500к.",
+        "Остановка масштабирования при отрицательной марже."
+      ],
+      "cash_note": "Финансировать этапами после подтверждения продуктовой активации."
+    },
+    "meta": {
+      "role": "CFO (Risk)",
+      "model_used": "gpt-5.2",
+      "limitations": [],
+      "warnings": []
+    }
+  },
+  "meta": {
+    "agent_id": "board-cfo-ru",
+    "generated_at": "2026-02-06T00:00:00.000Z",
+    "run_id": "fixture-board-cfo",
+    "mode": "board_review",
+    "input_echo": {},
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "board_review",
+      "version": "1.0",
+      "entities": {
+        "role": "CFO (Risk)",
+        "decision": "условно_за",
+        "summary": "Запуск оправдан, если CAC окупается в пределах 4-6 месяцев.",
+        "references": {}
+      },
+      "recommended_next_agents": [
+        "board-chair-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

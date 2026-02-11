@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  border-color: rgba(61, 69, 125, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body;
+}
+
+h1, h2, h3, h4 {
+  @apply font-heading;
+}
+
+::selection {
+  background: rgba(91, 92, 235, 0.2);
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-slate-200/70 shadow-soft;
+  }
+  .tag {
+    @apply inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2B2C4B];
+  }
+}

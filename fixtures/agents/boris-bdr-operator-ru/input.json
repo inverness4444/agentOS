@@ -1,0 +1,54 @@
+{
+  "inputs": {
+    "maxim_leads_json": {
+      "data": {
+        "leads": [
+          {
+            "name": "Test Lead",
+            "website": "https://example.com",
+            "phone": "+7 900 000-00-00",
+            "city": "Москва",
+            "category": "SaaS",
+            "dedupe_key": "domain:example.com",
+            "source": "yandex",
+            "proof_refs": []
+          }
+        ],
+        "meta": {
+          "generated_at": "2026-02-05T14:05:58.965Z"
+        }
+      },
+      "meta": {
+        "agent_id": "maxim-local-leads-ru",
+        "generated_at": "2026-02-05T14:05:58.965Z",
+        "run_id": "fixture",
+        "mode": "quick",
+        "input_echo": {},
+        "quality_checks": {
+          "no_fabrication": true,
+          "within_limits": true,
+          "schema_valid": true,
+          "dedupe_ok": true,
+          "grounding_ok": true
+        },
+        "limitations": [],
+        "assumptions": [],
+        "handoff": {
+          "type": "leads_table",
+          "version": "1.0",
+          "entities": {
+            "leads": []
+          },
+          "recommended_next_agents": [],
+          "compat": [
+            "anatoly-account-research-ru",
+            "leonid-outreach-dm-ru",
+            "emelyan-cold-email-ru",
+            "boris-bdr-operator-ru"
+          ]
+        },
+        "web_stats": null
+      }
+    }
+  }
+}

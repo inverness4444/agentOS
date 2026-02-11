@@ -1,0 +1,9 @@
+{
+  "mode": "quick",
+  "has_web_access": false,
+  "allow_placeholders_if_no_web": true,
+  "industry_or_niche": "маркетплейсы",
+  "geo": "Москва",
+  "target_count": 5,
+  "min_confidence": 40
+}

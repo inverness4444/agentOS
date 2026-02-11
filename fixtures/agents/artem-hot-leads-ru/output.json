@@ -1,0 +1,117 @@
+{
+  "data": {
+    "hot_leads": [],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.977Z",
+      "search_plan": {
+        "queries_used": []
+      },
+      "web_stats": {
+        "requests_made": 0,
+        "blocked_count": 0,
+        "errors_count": 0,
+        "duration_ms": 0,
+        "sources_used": {},
+        "top_errors": [],
+        "warnings": [],
+        "trace_summary": {}
+      },
+      "proof_items": [],
+      "rejected_hot": [],
+      "limitations": [
+        "Нет веб-доступа для поиска горячих сигналов."
+      ],
+      "assumptions": [],
+      "quality_checks": {
+        "no_gray_scraping": true,
+        "no_fabrication": true,
+        "dedupe_ok": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "artem-hot-leads-ru",
+    "generated_at": "2026-02-05T14:05:58.977Z",
+    "run_id": "8a3cad0c-d15e-4d65-aaca-f09d901cc440",
+    "mode": "quick",
+    "input_echo": {
+      "mode": "quick",
+      "has_web_access": false,
+      "max_web_requests": 40,
+      "focus": "crm",
+      "geo": "Россия",
+      "keywords": [
+        "CRM",
+        "Bitrix24",
+        "amoCRM",
+        "1C",
+        "интеграция CRM"
+      ],
+      "include_sources": {
+        "vk": true,
+        "telegram": true,
+        "maps_reviews": true,
+        "websites_forms": false
+      },
+      "time_window_days": 30,
+      "target_count": 3,
+      "min_hot_score": 60,
+      "require_proof": true,
+      "allow_placeholders_if_blocked": true,
+      "inbox_texts": [],
+      "exclude_domains": [],
+      "exclude_urls": [],
+      "dedupe_by": "mixed",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [
+      "Нет веб-доступа для поиска горячих сигналов."
+    ],
+    "assumptions": [],
+    "handoff": {
+      "type": "hot_leads",
+      "version": "1.0",
+      "entities": {
+        "leads": []
+      },
+      "recommended_next_agents": [
+        "anatoly-account-research-ru",
+        "leonid-outreach-dm-ru",
+        "boris-bdr-operator-ru"
+      ],
+      "compat": [
+        "leonid-outreach-dm-ru",
+        "boris-bdr-operator-ru"
+      ]
+    },
+    "web_stats": {
+      "requests_made": 0,
+      "blocked_count": 0,
+      "errors_count": 0,
+      "duration_ms": 0,
+      "sources_used": {},
+      "top_errors": [],
+      "warnings": [],
+      "trace_summary": {}
+    },
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    },
+    "trace_id": "8a3cad0c-d15e-4d65-aaca-f09d901cc440"
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

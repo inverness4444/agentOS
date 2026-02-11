@@ -1,0 +1,70 @@
+{
+  "data": {
+    "review": {
+      "role": "CEO (Growth)",
+      "stance": "условно_за",
+      "verdict": "Идея перспективная при запуске через ограниченный пилот.",
+      "key_arguments": [
+        "Есть существующая клиентская база для быстрого теста спроса.",
+        "Тема автоматизации повышает LTV и средний чек.",
+        "Риск можно снизить запуском на узком сегменте."
+      ],
+      "next_actions": [
+        "Собрать пилотную группу из 10-15 клиентов.",
+        "Запустить оффер с ограниченным функционалом на 2 недели.",
+        "Оценить воронку и повторные продажи перед масштабированием."
+      ],
+      "what_to_measure": [
+        "Конверсия в пилот",
+        "Доля продлений"
+      ],
+      "confidence_0_10": 7
+    },
+    "meta": {
+      "role": "CEO (Growth)",
+      "model_used": "gpt-5.2",
+      "limitations": [],
+      "warnings": []
+    }
+  },
+  "meta": {
+    "agent_id": "board-ceo-ru",
+    "generated_at": "2026-02-06T00:00:00.000Z",
+    "run_id": "fixture-board-ceo",
+    "mode": "board_review",
+    "input_echo": {},
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [],
+    "handoff": {
+      "type": "board_review",
+      "version": "1.0",
+      "entities": {
+        "role": "CEO (Growth)",
+        "decision": "условно_за",
+        "summary": "Идея перспективная при запуске через ограниченный пилот.",
+        "references": {}
+      },
+      "recommended_next_agents": [
+        "board-chair-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

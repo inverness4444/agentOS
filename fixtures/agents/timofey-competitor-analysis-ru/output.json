@@ -1,0 +1,164 @@
+{
+  "data": {
+    "competitors": [],
+    "pricing_evidence": {
+      "status": "pricing_unknown",
+      "pricing_unknown": true,
+      "what_checked": [],
+      "competitors": []
+    },
+    "comparison_table": [],
+    "win_angles": [],
+    "agentos_positioning": {},
+    "offers": {},
+    "meta": {
+      "generated_at": "2026-02-05T14:05:58.974Z",
+      "web_stats": {
+        "requests_made": 0,
+        "blocked_count": 0,
+        "errors_count": 0,
+        "duration_ms": 0,
+        "sources_used": {},
+        "top_errors": [],
+        "warnings": [],
+        "trace_summary": {}
+      },
+      "proof_items": [],
+      "limitations": [
+        "Нет веб-доступа для поиска конкурентов."
+      ],
+      "assumptions": [],
+      "search_plan": {
+        "queries_used": [
+          "AI агентство автоматизация бизнеса",
+          "AI агентство автоматизация бизнеса CRM",
+          "AI ассистенты для бизнеса",
+          "AI ассистенты для бизнеса CRM",
+          "чат-боты для продаж",
+          "чат-боты для продаж CRM",
+          "чат-бот поддержка VK Telegram",
+          "чат-бот поддержка VK Telegram CRM",
+          "маркетинг WB Ozon агентство",
+          "маркетинг WB Ozon агентство CRM",
+          "продвижение на Wildberries",
+          "продвижение на Wildberries CRM",
+          "колл-центр лидоген",
+          "колл-центр лидоген CRM",
+          "обработка заявок колл-центр",
+          "обработка заявок колл-центр CRM",
+          "внедрение amoCRM",
+          "внедрение amoCRM CRM",
+          "внедрение Bitrix24",
+          "внедрение Bitrix24 CRM",
+          "CRM интегратор",
+          "CRM интегратор CRM",
+          "AI автоматизация для селлеров",
+          "CRM для селлеров",
+          "AI автоматизация маркетплейс",
+          "CRM маркетплейс",
+          "AI автоматизация для локального бизнеса",
+          "CRM для локального бизнеса",
+          "AI автоматизация услуги",
+          "CRM услуги",
+          "AI автоматизация B2B",
+          "CRM B2B",
+          "AI автоматизация для бизнеса",
+          "CRM для бизнеса"
+        ]
+      },
+      "quality_checks": {
+        "no_fabrication": true,
+        "pricing_unknown_rate": 1,
+        "cases_unknown_rate": 1
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "timofey-competitor-analysis-ru",
+    "generated_at": "2026-02-05T14:05:58.974Z",
+    "run_id": "0fdabef3-2e52-4b1d-82b7-230cf6e37e6b",
+    "mode": "quick",
+    "input_echo": {
+      "mode": "quick",
+      "has_web_access": false,
+      "max_web_requests": 30,
+      "geo": "Россия",
+      "focus_segments": [
+        "sellers",
+        "local",
+        "b2b"
+      ],
+      "niche_hint": "CRM",
+      "competitor_types": [
+        "ai_agency",
+        "chatbots",
+        "wb_ozon_marketing",
+        "call_center",
+        "crm_impl"
+      ],
+      "include_pricing": true,
+      "include_cases": true,
+      "require_proof": true,
+      "recency_days": 365,
+      "allow_placeholders_if_blocked": true,
+      "exclude_domains": [],
+      "agentos_context": {
+        "name": "AgentOS",
+        "one_liner": "Маркетплейс и оркестрация ИИ-агентов для бизнеса: лидоген, поддержка, контент, аналитика, автоматизация процессов",
+        "pricing_monthly_rub": 2000,
+        "no_trial": true
+      },
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [
+      "Нет веб-доступа для поиска конкурентов."
+    ],
+    "assumptions": [],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "competitors": [],
+        "comparison_table": [],
+        "offers": {},
+        "win_angles": [],
+        "agentos_positioning": {}
+      },
+      "recommended_next_agents": [
+        "platon-prospect-research-ru",
+        "anatoly-account-research-ru",
+        "boris-bdr-operator-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": {
+      "requests_made": 0,
+      "blocked_count": 0,
+      "errors_count": 0,
+      "duration_ms": 0,
+      "sources_used": {},
+      "top_errors": [],
+      "warnings": [],
+      "trace_summary": {}
+    },
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    },
+    "trace_id": "0fdabef3-2e52-4b1d-82b7-230cf6e37e6b"
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}

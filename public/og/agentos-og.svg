@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AgentOS — AI агенты для продаж и маркетинга</title>
+  <desc id="desc">Open Graph изображение проекта AgentOS</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF0FF"/>
+      <stop offset="100%" stop-color="#DDE2FF"/>
+    </linearGradient>
+    <linearGradient id="pill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5C5BD6"/>
+      <stop offset="100%" stop-color="#3E3A8C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.32">
+    <circle cx="140" cy="120" r="6" fill="#7C7CF6"/>
+    <circle cx="1160" cy="110" r="6" fill="#7C7CF6"/>
+    <circle cx="110" cy="560" r="6" fill="#7C7CF6"/>
+    <circle cx="1080" cy="530" r="6" fill="#7C7CF6"/>
+  </g>
+  <rect x="72" y="64" width="1056" height="502" rx="36" fill="#FFFFFF" fill-opacity="0.88" stroke="#D8DDF7"/>
+  <text x="120" y="170" fill="#3E3A8C" font-family="Arial, sans-serif" font-size="42" font-weight="700">AgentOS</text>
+  <text x="120" y="250" fill="#1F2238" font-family="Arial, sans-serif" font-size="64" font-weight="700">Готовый AI-отдел</text>
+  <text x="120" y="320" fill="#1F2238" font-family="Arial, sans-serif" font-size="64" font-weight="700">продаж и контента</text>
+  <text x="120" y="388" fill="#5A6072" font-family="Arial, sans-serif" font-size="34">Лиды, персонализация, аутрич, контент и совет директоров</text>
+  <rect x="120" y="440" width="430" height="72" rx="36" fill="url(#pill)"/>
+  <text x="168" y="486" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="32" font-weight="700">agentos.ru</text>
+  <g transform="translate(760,430)">
+    <rect width="288" height="90" rx="24" fill="#EEF0FF" stroke="#D8DDF7"/>
+    <text x="28" y="42" fill="#3E3A8C" font-family="Arial, sans-serif" font-size="28" font-weight="700">20 агентов</text>
+    <text x="28" y="72" fill="#5A6072" font-family="Arial, sans-serif" font-size="22">в одной системе</text>
+  </g>
+</svg>

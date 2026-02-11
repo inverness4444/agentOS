@@ -1,0 +1,203 @@
+{
+  "data": {
+    "hooks": [
+      "Ошибка в AgentOS/автоматизация, которая съедает лиды",
+      "3 цифры по AgentOS/автоматизация, которые мало кто считает",
+      "Миф про AgentOS/автоматизация, который мешает результату",
+      "Все делают AgentOS/автоматизация неправильно — вот где",
+      "Чек-лист из 5 пунктов для AgentOS/автоматизация"
+    ],
+    "posts": [
+      {
+        "title": "Разбор: AgentOS/автоматизация без воды",
+        "platform_fit": [
+          "telegram",
+          "vk"
+        ],
+        "hook": "В AgentOS/автоматизация одна ошибка стоит заявок...",
+        "body": "В AgentOS/автоматизация одна ошибка стоит заявок каждую неделю. • Где ломается конверсия в AgentOS/автоматизация\n• Что исправить за 1 шаг\n• Как проверить за 10 минут\n• Почему обычное возражение — не причина Мини-доказательство: пример результата. мини-кейс. Напиши в личку слово \"разбор\"",
+        "bullets": [
+          "Где ломается конверсия в...",
+          "Что исправить за 1...",
+          "Как проверить за 10...",
+          "Почему обычное возражение —..."
+        ],
+        "proof_line": "Мини-доказательство: пример результата. мини-кейс.",
+        "cta": "Напиши в личку слово...",
+        "why_ru": "Прямо, с цифрами и без воды..."
+      }
+    ],
+    "scripts": [
+      {
+        "title": "Скрипт: AgentOS/автоматизация без воды",
+        "platform_fit": [
+          "youtube_shorts",
+          "instagram_reels",
+          "tiktok",
+          "rutube"
+        ],
+        "hook_0_2s": "Стоп. В AgentOS/автоматизация это убивает лиды",
+        "value_2_15s": [
+          "1 ошибка: лишние шаги",
+          "2 ошибка: нет цифр",
+          "3 ошибка: нет CTA"
+        ],
+        "proof_15_25s": "Proof: скрин результата.",
+        "cta_25_30s": "Напиши в личку слово...",
+        "on_screen_text": [
+          "Ошибка №1",
+          "Ошибка №2",
+          "Ошибка №3",
+          "CTA =...",
+          "Пиши слово"
+        ],
+        "why_ru": "Коротко, по делу, без обещаний —..."
+      }
+    ],
+    "meta": {
+      "generated_at": "2026-02-05T14:05:59.034Z",
+      "input_quality": "medium",
+      "needsReview": false,
+      "limitations": [],
+      "assumptions": [
+        "RU аудитория.",
+        "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+      ],
+      "quality_checks": {
+        "no_fluff": true,
+        "within_max_words": true,
+        "hooks_count_ok": true,
+        "posts_count_ok": true,
+        "scripts_count_ok": true
+      }
+    }
+  },
+  "meta": {
+    "agent_id": "hariton-viral-hooks-ru",
+    "generated_at": "2026-02-05T14:05:59.034Z",
+    "run_id": "926e790c-a362-44dd-8294-08b98e2572aa",
+    "mode": "deep",
+    "input_echo": {
+      "mode": "deep",
+      "niche": "AgentOS/автоматизация",
+      "goal": "leads",
+      "platforms": [
+        "telegram",
+        "vk",
+        "youtube_shorts",
+        "instagram_reels",
+        "tiktok",
+        "rutube"
+      ],
+      "voice": "straight",
+      "offer": {
+        "product_name": "AgentOS",
+        "one_liner": "ИИ-агенты для обработки заявок за 7 дней",
+        "cta_preference": "dm"
+      },
+      "assets": {
+        "proof_points": [],
+        "objections": [],
+        "mini_cases": []
+      },
+      "constraints": {
+        "hooks_count": 5,
+        "posts_count": 1,
+        "scripts_count": 1,
+        "max_words": 200,
+        "no_fluff": true
+      },
+      "language": "ru",
+      "budget": null,
+      "budget_applied": null,
+      "budget_warnings": []
+    },
+    "quality_checks": {
+      "no_fabrication": true,
+      "within_limits": true,
+      "dedupe_ok": true,
+      "grounding_ok": true,
+      "schema_valid": true
+    },
+    "limitations": [],
+    "assumptions": [
+      "RU аудитория.",
+      "Платформы: telegram, vk, youtube_shorts, instagram_reels, tiktok, rutube."
+    ],
+    "handoff": {
+      "type": "content_pack",
+      "version": "1.0",
+      "entities": {
+        "hooks": [
+          "Ошибка в AgentOS/автоматизация, которая съедает лиды",
+          "3 цифры по AgentOS/автоматизация, которые мало кто считает",
+          "Миф про AgentOS/автоматизация, который мешает результату",
+          "Все делают AgentOS/автоматизация неправильно — вот где",
+          "Чек-лист из 5 пунктов для AgentOS/автоматизация"
+        ],
+        "posts": [
+          {
+            "title": "Разбор: AgentOS/автоматизация без воды",
+            "platform_fit": [
+              "telegram",
+              "vk"
+            ],
+            "hook": "В AgentOS/автоматизация одна ошибка стоит заявок...",
+            "body": "В AgentOS/автоматизация одна ошибка стоит заявок каждую неделю. • Где ломается конверсия в AgentOS/автоматизация\n• Что исправить за 1 шаг\n• Как проверить за 10 минут\n• Почему обычное возражение — не причина Мини-доказательство: пример результата. мини-кейс. Напиши в личку слово \"разбор\"",
+            "bullets": [
+              "Где ломается конверсия в...",
+              "Что исправить за 1...",
+              "Как проверить за 10...",
+              "Почему обычное возражение —..."
+            ],
+            "proof_line": "Мини-доказательство: пример результата. мини-кейс.",
+            "cta": "Напиши в личку слово...",
+            "why_ru": "Прямо, с цифрами и без воды..."
+          }
+        ],
+        "scripts": [
+          {
+            "title": "Скрипт: AgentOS/автоматизация без воды",
+            "platform_fit": [
+              "youtube_shorts",
+              "instagram_reels",
+              "tiktok",
+              "rutube"
+            ],
+            "hook_0_2s": "Стоп. В AgentOS/автоматизация это убивает лиды",
+            "value_2_15s": [
+              "1 ошибка: лишние шаги",
+              "2 ошибка: нет цифр",
+              "3 ошибка: нет CTA"
+            ],
+            "proof_15_25s": "Proof: скрин результата.",
+            "cta_25_30s": "Напиши в личку слово...",
+            "on_screen_text": [
+              "Ошибка №1",
+              "Ошибка №2",
+              "Ошибка №3",
+              "CTA =...",
+              "Пиши слово"
+            ],
+            "why_ru": "Коротко, по делу, без обещаний —..."
+          }
+        ]
+      },
+      "recommended_next_agents": [
+        "kostya-image-generation-ru",
+        "seva-content-repurposing-ru"
+      ],
+      "compat": []
+    },
+    "web_stats": null,
+    "knowledge_used": {
+      "workspace_items": 0,
+      "agent_items": 0,
+      "top_ids": []
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}
