@@ -19,4 +19,16 @@ test("agent page defaults to chat workspace and includes history UI", () => {
   assert.ok(chatSource.includes("Новый тред"), "chat workspace has new thread action");
   assert.ok(chatSource.includes("Отправить"), "chat workspace has send button");
   assert.ok(chatSource.includes("печатает..."), "chat workspace has typing state");
+  assert.ok(chatSource.includes("Открыть источник"), "chat workspace shows source button for leads");
+  assert.ok(chatSource.includes("Debug"), "chat workspace has debug tab");
+  assert.ok(chatSource.includes("Чат"), "chat workspace has chat tab");
+  assert.ok(chatSource.includes("Диагностика поиска"), "chat workspace shows debug diagnostics section");
+  assert.ok(chatSource.includes("Routing debug"), "chat workspace exposes role/task routing debug");
+  assert.ok(chatSource.includes("Гео: СНГ"), "chat workspace has geo scope toggle");
+  assert.ok(!chatSource.includes("Показать ответ агента"), "full answer is rendered directly");
+
+  const chatStorePath = path.join(__dirname, "..", "lib", "agents", "chatStore.js");
+  const chatStoreSource = fs.readFileSync(chatStorePath, "utf8");
+  assert.ok(!chatStoreSource.includes("ещё полей"), "chat formatter has no hidden fields truncation");
+  assert.ok(!chatStoreSource.includes("...ещё"), "chat formatter has no show-more ellipsis");
 });

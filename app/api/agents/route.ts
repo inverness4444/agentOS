@@ -6,6 +6,12 @@ import {
   buildSystemPrompt,
   serializeAgentConfig
 } from "@/lib/agents/config";
+import {
+  buildUnifiedSystemPromptForAgent,
+  isBoardAgentCandidate,
+  parseConfigObject
+} from "@/lib/agents/rolePolicy.js";
+import { assignRoleLocksForAgents } from "@/lib/agents/taskRouting.js";
 
 const LEGACY_SYSTEM_AGENT_NAME_MIGRATIONS: ReadonlyArray<
   readonly [legacyName: string, currentName: string]
@@ -68,16 +74,13 @@ const SYSTEM_AGENT_CANONICAL_NAMES = [
 ] as const;
 
 const BOARD_INTERNAL_KEY_PREFIX = "board-agent:";
+const userMaintenanceProcessed =
+  (globalThis as typeof globalThis & { __agentosAgentMaintenanceProcessed?: Set<string> })
+    .__agentosAgentMaintenanceProcessed || new Set<string>();
 
-const parseConfigObject = (raw: string | null | undefined): Record<string, unknown> | null => {
-  if (typeof raw !== "string" || raw.trim().length === 0) return null;
-  try {
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? (parsed as Record<string, unknown>) : null;
-  } catch {
-    return null;
-  }
-};
+(
+  globalThis as typeof globalThis & { __agentosAgentMaintenanceProcessed?: Set<string> }
+).__agentosAgentMaintenanceProcessed = userMaintenanceProcessed;
 
 const isInternalBoardAgent = (agent: { name?: string | null; config?: string | null }) => {
   const name = String(agent?.name || "").trim().toLowerCase();
@@ -91,8 +94,156 @@ const isInternalBoardAgent = (agent: { name?: string | null; config?: string | n
   }
 
   const raw = String(agent?.config || "");
-  return raw.includes('"internalKey":"board-agent:');
+  if (raw.includes('"internalKey":"board-agent:')) return true;
+  return isBoardAgentCandidate({
+    name: agent?.name || "",
+    config: agent?.config || ""
+  });
 };
+
+const resolveUnifiedPrompt = (agent: {
+  name?: string | null;
+  config?: string | null | Record<string, unknown>;
+  systemPrompt?: string | null;
+  roleKey?: string | null;
+  allowedTaskTypes?: string[] | null;
+}) => {
+  const safeName = String(agent?.name || "Agent");
+  return buildUnifiedSystemPromptForAgent({
+    name: safeName,
+    config: agent?.config || {},
+    systemPrompt: String(agent?.systemPrompt || "")
+  });
+};
+
+async function normalizeNonBoardAgentPrompts(userId: string, agents: Array<{
+  id: string;
+  name: string;
+  config: string | null;
+  systemPrompt: string;
+  roleKey?: string | null;
+  allowedTaskTypes?: string[] | null;
+}>) {
+  const updates: Array<Promise<unknown>> = [];
+  for (const agent of agents) {
+    if (isInternalBoardAgent(agent)) continue;
+    const normalized = resolveUnifiedPrompt(agent);
+    if (normalized !== agent.systemPrompt) {
+      updates.push(
+        prisma.agent.update({
+          where: { id: agent.id },
+          data: { systemPrompt: normalized }
+        })
+      );
+    }
+  }
+
+  if (updates.length === 0) return null;
+  await Promise.all(updates);
+  return prisma.agent.findMany({
+    where: { userId },
+    orderBy: { updatedAt: "desc" }
+  });
+}
+
+const normalizeStringArray = (value: unknown) => {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => String(item || "").trim().toLowerCase())
+    .filter(Boolean);
+};
+
+const isSameStringArray = (left: unknown, right: unknown) => {
+  const a = normalizeStringArray(left);
+  const b = normalizeStringArray(right);
+  if (a.length !== b.length) return false;
+  return a.every((item, index) => item === b[index]);
+};
+
+const stableJson = (value: unknown) => {
+  try {
+    return JSON.stringify(value ?? null);
+  } catch {
+    return "null";
+  }
+};
+
+const SYSTEM_SEED_NAME_SET = new Set<string>(SYSTEM_AGENT_CANONICAL_NAMES);
+const isSystemSeedAgent = (name: string) => SYSTEM_SEED_NAME_SET.has(String(name || ""));
+
+async function syncRoleLocksForNonBoardAgents(userId: string, agents: Array<{
+  id: string;
+  name: string;
+  description: string | null;
+  systemPrompt: string;
+  config: string | null;
+  roleKey?: string | null;
+  allowedTaskTypes?: string[] | null;
+  defaultMode?: string | null;
+  webBudget?: number | null;
+  maxOutputItems?: unknown;
+  escalationPolicy?: string | null;
+}>) {
+  const nonBoard = agents.filter((agent) => !isInternalBoardAgent(agent));
+  if (nonBoard.length === 0) return null;
+
+  const systemSeed = nonBoard.filter((agent) => isSystemSeedAgent(agent.name));
+  const target = systemSeed.length > 0 ? systemSeed : nonBoard.slice(0, 16);
+  if (target.length === 0) return null;
+
+  const assignments = assignRoleLocksForAgents(
+    target.map((agent) => ({
+      id: agent.id,
+      name: agent.name,
+      description: agent.description || "",
+      systemPrompt: agent.systemPrompt || "",
+      config: agent.config || ""
+    }))
+  );
+  if (assignments.length === 0) return null;
+
+  const updates: Array<Promise<unknown>> = [];
+  for (const assignment of assignments) {
+    const current = target.find((agent) => agent.id === assignment.agentId);
+    if (!current) continue;
+    const nextPrompt = resolveUnifiedPrompt({
+      ...current,
+      roleKey: assignment.roleKey,
+      allowedTaskTypes: assignment.allowedTaskTypes
+    });
+    const needsUpdate =
+      String(current.roleKey || "") !== String(assignment.roleKey) ||
+      !isSameStringArray(current.allowedTaskTypes, assignment.allowedTaskTypes) ||
+      String(current.defaultMode || "") !== String(assignment.defaultMode || "") ||
+      Number(current.webBudget ?? -1) !== Number(assignment.webBudget ?? 0) ||
+      stableJson(current.maxOutputItems ?? null) !== stableJson(assignment.maxItems ?? null) ||
+      String(current.escalationPolicy || "") !== String(assignment.escalationPolicy || "") ||
+      String(current.systemPrompt || "") !== String(nextPrompt || "");
+
+    if (!needsUpdate) continue;
+    updates.push(
+      prisma.agent.update({
+        where: { id: current.id },
+        data: {
+          roleKey: assignment.roleKey,
+          allowedTaskTypes: assignment.allowedTaskTypes,
+          defaultMode: assignment.defaultMode,
+          webBudget: assignment.webBudget,
+          maxOutputItems: assignment.maxItems as any,
+          escalationPolicy: assignment.escalationPolicy,
+          systemPrompt: nextPrompt
+        }
+      })
+    );
+  }
+
+  if (updates.length === 0) return null;
+  await Promise.all(updates);
+  return prisma.agent.findMany({
+    where: { userId },
+    orderBy: { updatedAt: "desc" }
+  });
+}
 
 async function migrateLegacySystemAgentNames(userId: string) {
   let migrated = false;
@@ -168,14 +319,43 @@ export async function GET() {
     orderBy: { updatedAt: "desc" }
   });
 
-  const renamedAgents = await migrateLegacySystemAgentNames(userId);
-  if (renamedAgents) {
-    agents = renamedAgents;
+  // Run expensive maintenance only once per server process for each user.
+  if (!userMaintenanceProcessed.has(userId)) {
+    const renamedAgents = await migrateLegacySystemAgentNames(userId);
+    if (renamedAgents) {
+      agents = renamedAgents;
+    }
+
+    const dedupedAgents = await dedupeSystemAgentNames(userId);
+    if (dedupedAgents) {
+      agents = dedupedAgents;
+    }
+
+    const normalizedPrompts = await normalizeNonBoardAgentPrompts(userId, agents);
+    if (normalizedPrompts) {
+      agents = normalizedPrompts;
+    }
+    const syncedRoles = await syncRoleLocksForNonBoardAgents(userId, agents as any);
+    if (syncedRoles) {
+      agents = syncedRoles;
+    }
+    userMaintenanceProcessed.add(userId);
   }
 
-  const dedupedAgents = await dedupeSystemAgentNames(userId);
-  if (dedupedAgents) {
-    agents = dedupedAgents;
+  const normalizedPrompts = await normalizeNonBoardAgentPrompts(userId, agents);
+  if (normalizedPrompts) {
+    agents = normalizedPrompts;
+  }
+  const syncedRoles = await syncRoleLocksForNonBoardAgents(userId, agents as any);
+  if (syncedRoles) {
+    agents = syncedRoles;
+  }
+
+  // Fast path for regular runtime requests:
+  // if user already has any agents, skip expensive bootstrap imports/seeding.
+  if (agents.length > 0) {
+    const visibleAgents = agents.filter((agent) => !isInternalBoardAgent(agent));
+    return NextResponse.json({ agents: visibleAgents });
   }
 
   const module = await import("@/lib/agents/platon");
@@ -852,6 +1032,15 @@ export async function GET() {
     }
   }
 
+  const normalizedAfterSeed = await normalizeNonBoardAgentPrompts(userId, agents);
+  if (normalizedAfterSeed) {
+    agents = normalizedAfterSeed;
+  }
+  const syncedAfterSeed = await syncRoleLocksForNonBoardAgents(userId, agents as any);
+  if (syncedAfterSeed) {
+    agents = syncedAfterSeed;
+  }
+
   const visibleAgents = agents.filter((agent) => !isInternalBoardAgent(agent));
   return NextResponse.json({ agents: visibleAgents });
 }
@@ -866,8 +1055,10 @@ export async function POST(request: Request) {
   const name = String(body.name ?? "Новый агент");
   const description = String(body.description ?? "Описание агента");
   const config = buildDefaultAgentConfig(name);
+  const defaultPrompt = buildSystemPrompt(config, name);
   const systemPrompt = String(
-    body.systemPrompt ?? buildSystemPrompt(config, name)
+    body.systemPrompt ??
+      (isBoardAgentCandidate({ name, config }) ? defaultPrompt : resolveUnifiedPrompt({ name, config }))
   );
   const outputSchema = String(body.outputSchema ?? "{}");
   const toolIds = JSON.stringify(body.toolIds ?? []);
@@ -884,6 +1075,15 @@ export async function POST(request: Request) {
       published: false
     }
   });
+
+  // Force full read path once after write, so maintenance/bootstrap can run when needed.
+  userMaintenanceProcessed.delete(userId);
+
+  const refreshed = await prisma.agent.findMany({
+    where: { userId },
+    orderBy: { updatedAt: "desc" }
+  });
+  await syncRoleLocksForNonBoardAgents(userId, refreshed as any);
 
   return NextResponse.json({ agent });
 }
