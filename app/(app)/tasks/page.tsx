@@ -46,7 +46,7 @@ export default function TasksPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState<"All" | "To Review">("To Review");
+  const [filter, setFilter] = useState<"All" | "To Review">("All");
   const [page, setPage] = useState(1);
   const [sortKey, setSortKey] = useState<"updated" | "status">("updated");
   const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
@@ -184,10 +184,17 @@ export default function TasksPage() {
         ) : error ? (
           <ErrorState message={error} />
         ) : paged.length === 0 ? (
-          <EmptyState
-            title="Задач пока нет"
-            description="Создайте первую задачу, чтобы запустить агента или команду."
-          />
+          filter === "To Review" && tasks.length > 0 ? (
+            <EmptyState
+              title="В To Review задач нет"
+              description="Все задачи завершены. Переключитесь на вкладку All, чтобы увидеть историю."
+            />
+          ) : (
+            <EmptyState
+              title="Задач пока нет"
+              description="Создайте первую задачу, чтобы запустить агента или команду."
+            />
+          )
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-[#1F2238]">

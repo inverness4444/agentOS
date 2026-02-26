@@ -207,6 +207,80 @@ model TaskMessage {
   @@index([userId])
 }
 
+model Lead {
+  id             String   @id @default(cuid())
+  taskId         String?
+  runId          String?
+  agentId        String
+  title          String
+  url            String
+  normalizedUrl  String
+  source         String
+  geo            String?
+  snippet        String?
+  whyMatch       String?
+  contactHint    String?
+  confidence     Int
+  searchQueryId  String?
+  createdAt      DateTime @default(now())
+
+  searchQuery SearchQuery? @relation(fields: [searchQueryId], references: [id], onDelete: SetNull)
+
+  @@index([taskId])
+  @@index([runId])
+  @@index([agentId])
+  @@index([normalizedUrl])
+  @@index([searchQueryId])
+  @@index([createdAt])
+}
+
+model SearchQuery {
+  id         String   @id @default(cuid())
+  taskId     String?
+  runId      String?
+  agentId    String
+  query      String
+  provider   String
+  source     String?
+  geo        String?
+  limit      Int?
+  usageTokens Int?
+  status     String   @default("OK")
+  errorText  String?
+  fetchedAt  DateTime @default(now())
+
+  leads      Lead[]
+  rawResults SearchResultRaw[]
+
+  @@index([taskId])
+  @@index([runId])
+  @@index([agentId])
+  @@index([provider])
+  @@index([status])
+  @@index([fetchedAt])
+}
+
+model SearchResultRaw {
+  id           String   @id @default(cuid())
+  taskId       String?
+  runId        String?
+  agentId      String
+  queryId      String?
+  provider     String
+  fetchedAt    DateTime @default(now())
+  rawJson      String?
+  resultsCount Int      @default(0)
+
+  query SearchQuery? @relation(fields: [queryId], references: [id], onDelete: SetNull)
+
+  @@index([taskId])
+  @@index([runId])
+  @@index([agentId])
+  @@index([queryId])
+  @@index([provider])
+  @@index([fetchedAt])
+}
+
 model TaskFolder {
   id        String   @id @default(cuid())
   userId    String
@@ -228,6 +302,12 @@ model Agent {
   outputSchema  String
   toolIds       String
   config        String     @default("{}")
+  roleKey       String     @default("GENERAL_OPS")
+  allowedTaskTypes String[] @default([])
+  defaultMode   String     @default("fast")
+  webBudget     Int        @default(0)
+  maxOutputItems Json?
+  escalationPolicy String   @default("best_effort_then_handoff")
   published     Boolean    @default(false)
   runs          AgentRun[]
   createdAt     DateTime   @default(now())

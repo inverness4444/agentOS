@@ -48,8 +48,9 @@ export async function GET() {
     ? new Date(lastDebit.createdAt.getTime() + SUBSCRIPTION_PERIOD_DAYS * MS_IN_DAY)
     : null;
   const hasActivePaidPeriod = Boolean(paidPeriodEndAt && paidPeriodEndAt.getTime() > Date.now());
+  const hasManualProAccess = plan === "PRO" && !lastDebit?.createdAt;
 
-  if (!hasActivePaidPeriod && plan === "PRO") {
+  if (!hasActivePaidPeriod && plan === "PRO" && lastDebit?.createdAt) {
     await prisma.user.update({
       where: { id: userId },
       data: { plan: "FREE" }
@@ -65,8 +66,8 @@ export async function GET() {
     plan = "PRO";
   }
 
-  const hasSubscription = plan === "PRO" && hasActivePaidPeriod;
-  const effectiveNextPaymentAt = hasSubscription ? paidPeriodEndAt : null;
+  const hasSubscription = plan === "PRO" && (hasManualProAccess || hasActivePaidPeriod);
+  const effectiveNextPaymentAt = hasActivePaidPeriod ? paidPeriodEndAt : null;
   const daysLeft =
     hasSubscription && effectiveNextPaymentAt
       ? Math.max(0, Math.ceil((effectiveNextPaymentAt.getTime() - Date.now()) / MS_IN_DAY))

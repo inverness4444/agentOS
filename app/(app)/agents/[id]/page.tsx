@@ -341,15 +341,17 @@ export default function AgentDetailPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <AgentHeader
-        name={agent.name}
-        avatarUrl={agentAvatar}
-        statusLabel={statusLabel}
-        published={agent.published}
-        onTogglePublished={handleTogglePublished}
-        onBack={() => router.push("/agents")}
-      />
+    <div className={activeTab === "build" ? "space-y-6" : "h-[100dvh]"}>
+      {activeTab === "build" ? (
+        <AgentHeader
+          name={agent.name}
+          avatarUrl={agentAvatar}
+          statusLabel={statusLabel}
+          published={agent.published}
+          onTogglePublished={handleTogglePublished}
+          onBack={() => router.push("/agents")}
+        />
+      ) : null}
 
       {error && <ErrorState message={error} />}
 
@@ -576,12 +578,24 @@ export default function AgentDetailPage() {
           <RightPanelAccordions config={config} />
         </div>
       ) : (
-        <AgentChatWorkspace
-          agentId={agent.id}
-          agentName={agent.name}
-          avatarUrl={agentAvatar}
-          initialInput={runDraftPrompt}
-        />
+        <div className="flex h-full flex-col overflow-hidden bg-white">
+          <AgentHeader
+            name={agent.name}
+            avatarUrl={agentAvatar}
+            statusLabel={statusLabel}
+            published={agent.published}
+            onTogglePublished={handleTogglePublished}
+            onBack={() => router.push("/agents")}
+            attached
+          />
+          <AgentChatWorkspace
+            agentId={agent.id}
+            agentName={agent.name}
+            avatarUrl={agentAvatar}
+            initialInput={runDraftPrompt}
+            attached
+          />
+        </div>
       )}
     </div>
   );

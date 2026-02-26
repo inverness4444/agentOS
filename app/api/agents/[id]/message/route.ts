@@ -17,6 +17,9 @@ const parseMultipartBody = async (request: Request) => {
   const thread_id = String(form.get("thread_id") || form.get("threadId") || "").trim();
   const content = String(form.get("content") || form.get("message") || "").trim();
   const save_to_knowledge = toBool(form.get("save_to_knowledge"));
+  const mode = String(form.get("mode") || form.get("artem_mode") || "").trim();
+  const target = String(form.get("target") || form.get("artem_target") || "").trim();
+  const geo_scope = String(form.get("geo_scope") || form.get("artem_geo_scope") || "").trim();
   const files: ApiFile[] = [];
 
   const rawFiles = form.getAll("files");
@@ -36,6 +39,9 @@ const parseMultipartBody = async (request: Request) => {
     thread_id,
     content,
     save_to_knowledge,
+    mode,
+    target,
+    geo_scope,
     files
   };
 };
@@ -46,6 +52,9 @@ const parseJsonBody = async (request: Request) => {
     thread_id: String(body.thread_id || body.threadId || "").trim(),
     content: String(body.content || body.message || "").trim(),
     save_to_knowledge: toBool(body.save_to_knowledge),
+    mode: String(body.mode || body.artem_mode || "").trim(),
+    target: String(body.target || body.artem_target || "").trim(),
+    geo_scope: String(body.geo_scope || body.artem_geo_scope || "").trim(),
     files: [] as ApiFile[]
   };
 };
@@ -84,7 +93,10 @@ export async function POST(
       threadId: threadId || undefined,
       content,
       files: payload.files,
-      saveToKnowledge: payload.save_to_knowledge
+      saveToKnowledge: payload.save_to_knowledge,
+      mode: payload.mode,
+      target: payload.target,
+      geoScope: payload.geo_scope
     });
     return NextResponse.json(result);
   } catch (error: any) {

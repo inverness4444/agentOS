@@ -4,7 +4,8 @@ const {
   detectTaskType,
   buildRoutingDecision,
   applyRoleLockToInput,
-  buildRoleLockFromAgent
+  buildRoleLockFromAgent,
+  assignRoleLocksForAgents
 } = require("../lib/agents/taskRouting.js");
 
 test("timofey fast competitor task gets strict budget and item limits", () => {
@@ -73,4 +74,22 @@ test("unknown db role key falls back to runner role mapping", () => {
 
   assert.equal(policy.roleKey, "ROLE_03");
   assert.equal(decision.outOfRole, false);
+});
+
+test("canonical agents are assigned deterministic role-locks by identity", () => {
+  const assignments = assignRoleLocksForAgents([
+    { id: "1", name: "Мария — Разбор компании", description: "" },
+    { id: "2", name: "Тимофей — Анализ конкурентов", description: "" },
+    { id: "3", name: "Артём — Горячие лиды", description: "" },
+    { id: "4", name: "Емельян — Холодные письма", description: "" },
+    { id: "5", name: "Ирина — Рубрикатор контента", description: "" },
+    { id: "6", name: "Анастасия — Архитектор процессов и схем", description: "" }
+  ]);
+  const byId = new Map(assignments.map((item) => [item.agentId, item]));
+  assert.equal(byId.get("1")?.roleKey, "ROLE_02");
+  assert.equal(byId.get("2")?.roleKey, "ROLE_03");
+  assert.equal(byId.get("3")?.roleKey, "ROLE_04");
+  assert.equal(byId.get("4")?.roleKey, "ROLE_05");
+  assert.equal(byId.get("5")?.roleKey, "ROLE_10");
+  assert.equal(byId.get("6")?.roleKey, "ROLE_15");
 });

@@ -315,16 +315,16 @@ const leonidPrompt: AgentPrompt = {
 
 const emelyanPrompt: AgentPrompt = {
   role:
-    "Пишет короткие RU cold emails на основе входных JSON (Мария/Артём) без выдумок.",
+    "Пишет готовые RU тексты аутрича (email/DM/follow-up/скрипты) полностью, без пустых скелетов.",
   sop: [
-    "Персонализация только из входного JSON, без фантазий.",
-    "1–2 строки персонализации, 2–3 наблюдения, 1 CTA.",
-    "Без клише и обещаний KPI.",
-    "Если нет входных JSON — задай 1 вопрос.",
-    "Ответ — строго JSON с ключами email_sequences и meta."
+    "Всегда сначала дай готовый рабочий черновик: тема + прехедер + полный текст + CTA.",
+    "Дай 2 альтернативы (короче/жёстче) и 2 follow-up.",
+    "Если данных мало — делай best-effort персонализацию по тексту пользователя, потом задай максимум 3 уточнения.",
+    "Не отвечай фразами 'нужны данные/пришли JSON/нет данных'.",
+    "Не выводи YAML/JSON в пользовательском ответе, если пользователь явно не просил."
   ].join("\n"),
   output:
-    "Строго JSON без markdown. Любые выводы — только по данным входного JSON."
+    "Пользовательский ответ — markdown-текст с готовыми сообщениями. JSON допустим только как внутренний артефакт."
 };
 
 const borisPrompt: AgentPrompt = {
@@ -1156,7 +1156,7 @@ export const buildSystemPrompt = (
   config: AgentConfig,
   agentName = "Agent"
 ) => {
-  return [
+  const basePrompt = [
     `Agent: ${agentName}`,
     "",
     "Role:",
@@ -1168,6 +1168,24 @@ export const buildSystemPrompt = (
     "Output:",
     config.prompt.output
   ].join("\n");
+
+  try {
+    // Keep board/internal roles untouched; normalize all regular agents to one response contract.
+    const {
+      buildUnifiedSystemPromptForAgent,
+      isBoardAgentCandidate
+    } = require("./rolePolicy.js");
+    if (isBoardAgentCandidate({ name: agentName, config })) {
+      return basePrompt;
+    }
+    return buildUnifiedSystemPromptForAgent({
+      name: agentName,
+      config,
+      systemPrompt: basePrompt
+    });
+  } catch {
+    return basePrompt;
+  }
 };
 
 export const serializeAgentConfig = (config: AgentConfig) =>

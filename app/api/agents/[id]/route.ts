@@ -6,6 +6,10 @@ import {
   parseAgentConfig,
   serializeAgentConfig
 } from "@/lib/agents/config";
+import {
+  buildUnifiedSystemPromptForAgent,
+  isBoardAgentCandidate
+} from "@/lib/agents/rolePolicy.js";
 
 const getRouteId = async (context: { params: Promise<{ id: string }> }) => {
   const { id } = await context.params;
@@ -77,7 +81,15 @@ const updateAgent = async (
 
   const systemPrompt = body.systemPrompt
     ? String(body.systemPrompt)
-    : buildSystemPrompt(nextConfig, name);
+    : (() => {
+        const defaultPrompt = buildSystemPrompt(nextConfig, name);
+        if (isBoardAgentCandidate({ name, config: nextConfig })) return defaultPrompt;
+        return buildUnifiedSystemPromptForAgent({
+          name,
+          config: nextConfig,
+          systemPrompt: existing.systemPrompt || defaultPrompt
+        });
+      })();
 
   const data = {
     name,

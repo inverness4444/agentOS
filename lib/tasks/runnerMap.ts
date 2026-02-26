@@ -17,6 +17,7 @@ import * as hariton from "@/lib/agents/hariton";
 import * as kostya from "@/lib/agents/kostya";
 import * as seva from "@/lib/agents/seva";
 import * as mitya from "@/lib/agents/mitya";
+import { buildUnifiedSystemPromptForAgent } from "@/lib/agents/rolePolicy.js";
 
 export type TaskRunner = {
   key: string;
@@ -32,7 +33,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "platon",
     agentId: platon.platonAgent.id,
     displayName: platon.platonAgent.displayName,
-    systemPrompt: platon.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: platon.platonAgent.displayName,
+      systemPrompt: platon.systemPrompt
+    }),
     isWeb: true,
     run: platon.generateOutput
   },
@@ -40,7 +44,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "maxim",
     agentId: maxim.maximAgent.id,
     displayName: maxim.maximAgent.displayName,
-    systemPrompt: maxim.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: maxim.maximAgent.displayName,
+      systemPrompt: maxim.systemPrompt
+    }),
     isWeb: true,
     run: maxim.generateOutput
   },
@@ -48,7 +55,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "fedor-b2b-leads-ru",
     agentId: fedor.fedorAgent.id,
     displayName: fedor.fedorAgent.displayName,
-    systemPrompt: fedor.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: fedor.fedorAgent.displayName,
+      systemPrompt: fedor.systemPrompt
+    }),
     isWeb: true,
     run: fedor.generateOutput
   },
@@ -56,7 +66,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "artem-hot-leads-ru",
     agentId: artem.artemAgent.id,
     displayName: artem.artemAgent.displayName,
-    systemPrompt: artem.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: artem.artemAgent.displayName,
+      systemPrompt: artem.systemPrompt
+    }),
     isWeb: true,
     run: artem.generateOutput
   },
@@ -64,7 +77,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "anatoly",
     agentId: anatoly.anatolyAgent.id,
     displayName: anatoly.anatolyAgent.displayName,
-    systemPrompt: anatoly.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: anatoly.anatolyAgent.displayName,
+      systemPrompt: anatoly.systemPrompt
+    }),
     isWeb: true,
     run: anatoly.generateOutput
   },
@@ -72,7 +88,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "timofey-competitor-analysis-ru",
     agentId: timofey.timofeyAgent.id,
     displayName: timofey.timofeyAgent.displayName,
-    systemPrompt: timofey.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: timofey.timofeyAgent.displayName,
+      systemPrompt: timofey.systemPrompt
+    }),
     isWeb: true,
     run: timofey.generateOutput
   },
@@ -80,7 +99,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "leonid-outreach-dm-ru",
     agentId: leonid.leonidAgent.id,
     displayName: leonid.leonidAgent.displayName,
-    systemPrompt: leonid.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: leonid.leonidAgent.displayName,
+      systemPrompt: leonid.systemPrompt
+    }),
     isWeb: false,
     run: leonid.generateOutput
   },
@@ -88,7 +110,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "emelyan-cold-email-ru",
     agentId: emelyan.emelyanAgent.id,
     displayName: emelyan.emelyanAgent.displayName,
-    systemPrompt: emelyan.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: emelyan.emelyanAgent.displayName,
+      systemPrompt: emelyan.systemPrompt
+    }),
     isWeb: false,
     run: emelyan.generateOutput
   },
@@ -96,7 +121,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "boris-bdr-operator-ru",
     agentId: boris.borisAgent.id,
     displayName: boris.borisAgent.displayName,
-    systemPrompt: boris.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: boris.borisAgent.displayName,
+      systemPrompt: boris.systemPrompt
+    }),
     isWeb: false,
     run: boris.generateOutput
   },
@@ -104,7 +132,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "pavel-reels-analysis-ru",
     agentId: pavel.pavelAgent.id,
     displayName: pavel.pavelAgent.displayName,
-    systemPrompt: pavel.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: pavel.pavelAgent.displayName,
+      systemPrompt: pavel.systemPrompt
+    }),
     isWeb: false,
     run: pavel.generateOutput
   },
@@ -112,7 +143,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "trofim-shorts-analogs-ru",
     agentId: trofim.trofimAgent.id,
     displayName: trofim.trofimAgent.displayName,
-    systemPrompt: trofim.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: trofim.trofimAgent.displayName,
+      systemPrompt: trofim.systemPrompt
+    }),
     isWeb: false,
     run: trofim.generateOutput
   },
@@ -120,7 +154,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "irina-content-ideation-ru",
     agentId: irina.irinaAgent.id,
     displayName: irina.irinaAgent.displayName,
-    systemPrompt: irina.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: irina.irinaAgent.displayName,
+      systemPrompt: irina.systemPrompt
+    }),
     isWeb: false,
     run: irina.generateOutput
   },
@@ -128,7 +165,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "hariton-viral-hooks-ru",
     agentId: hariton.haritonAgent.id,
     displayName: hariton.haritonAgent.displayName,
-    systemPrompt: hariton.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: hariton.haritonAgent.displayName,
+      systemPrompt: hariton.systemPrompt
+    }),
     isWeb: false,
     run: hariton.generateOutput
   },
@@ -136,7 +176,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "kostya-image-generation-ru",
     agentId: kostya.kostyaAgent.id,
     displayName: kostya.kostyaAgent.displayName,
-    systemPrompt: kostya.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: kostya.kostyaAgent.displayName,
+      systemPrompt: kostya.systemPrompt
+    }),
     isWeb: false,
     run: kostya.generateOutput
   },
@@ -144,7 +187,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "seva-content-repurposing-ru",
     agentId: seva.sevaAgent.id,
     displayName: seva.sevaAgent.displayName,
-    systemPrompt: seva.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: seva.sevaAgent.displayName,
+      systemPrompt: seva.systemPrompt
+    }),
     isWeb: false,
     run: seva.generateOutput
   },
@@ -152,7 +198,10 @@ const runnerMap: Record<string, TaskRunner> = {
     key: "mitya-workflow-diagram-ru",
     agentId: mitya.mityaAgent.id,
     displayName: mitya.mityaAgent.displayName,
-    systemPrompt: mitya.systemPrompt,
+    systemPrompt: buildUnifiedSystemPromptForAgent({
+      name: mitya.mityaAgent.displayName,
+      systemPrompt: mitya.systemPrompt
+    }),
     isWeb: false,
     run: mitya.generateOutput
   }
@@ -170,6 +219,71 @@ const buildBaseInput = (text: string, toolsEnabled: boolean) => ({
   max_web_requests: toolsEnabled ? 5 : 0
 });
 
+const URL_WITH_PROTOCOL_SINGLE_REGEX = /https?:\/\/[^\s)>"'`]+/i;
+const DOMAIN_LIKE_SINGLE_REGEX =
+  /\b(?:www\.)?[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9-]{2,})+\b/i;
+const INVALID_TLD_HINTS = new Set([
+  "html",
+  "htm",
+  "php",
+  "asp",
+  "aspx",
+  "js",
+  "css",
+  "json",
+  "xml",
+  "txt"
+]);
+
+const normalizeUrlFromText = (value: string) => {
+  const safe = String(value || "").trim().replace(/[),.;!?]+$/g, "");
+  if (!safe) return "";
+  const candidate = /^https?:\/\//i.test(safe) ? safe : `https://${safe.replace(/^www\./i, "")}`;
+  try {
+    const parsed = new URL(candidate);
+    const host = parsed.hostname.toLowerCase().replace(/^www\./, "");
+    const labels = host.split(".").filter(Boolean);
+    if (labels.length < 2) return "";
+    const tld = labels[labels.length - 1] || "";
+    if (!/^[a-z]{2,24}$/i.test(tld)) return "";
+    if (INVALID_TLD_HINTS.has(tld.toLowerCase())) return "";
+    parsed.protocol = "https:";
+    parsed.hostname = host;
+    parsed.pathname = parsed.pathname.replace(/\/+$/, "") || "/";
+    parsed.hash = "";
+    return parsed.toString();
+  } catch {
+    return "";
+  }
+};
+
+const deriveCompanyNameFromUrl = (url: string) => {
+  const safeUrl = normalizeUrlFromText(url);
+  if (!safeUrl) return "";
+  try {
+    const host = new URL(safeUrl).hostname.replace(/^www\./, "");
+    const root = host.split(".").slice(0, -1).join(".") || host;
+    return root
+      .replace(/[-_]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .map((part) => (part ? part[0].toUpperCase() + part.slice(1) : ""))
+      .join(" ");
+  } catch {
+    return "";
+  }
+};
+
+const extractCompanyContext = (text: string) => {
+  const source = String(text || "");
+  const protocolMatch = source.match(URL_WITH_PROTOCOL_SINGLE_REGEX)?.[0] || "";
+  const domainMatch = source.match(DOMAIN_LIKE_SINGLE_REGEX)?.[0] || "";
+  const website = normalizeUrlFromText(protocolMatch || domainMatch);
+  const companyName = deriveCompanyNameFromUrl(website);
+  return { companyName, companyWebsite: website };
+};
+
 export const buildAgentInput = (key: string, text: string, toolsEnabled: boolean) => {
   const base = buildBaseInput(text, toolsEnabled);
   switch (key) {
@@ -181,8 +295,15 @@ export const buildAgentInput = (key: string, text: string, toolsEnabled: boolean
       return { ...base, industries: [text], geo: "Россия" };
     case "artem-hot-leads-ru":
       return { ...base, keywords: [text], geo: "Россия" };
-    case "anatoly":
-      return { ...base, company_name: text };
+    case "anatoly": {
+      const company = extractCompanyContext(text);
+      return {
+        ...base,
+        company_name: company.companyName,
+        company_domain_or_url: company.companyWebsite,
+        raw_text: text
+      };
+    }
     case "timofey-competitor-analysis-ru":
       return { ...base, competitors: [text], focus: text };
     case "leonid-outreach-dm-ru":

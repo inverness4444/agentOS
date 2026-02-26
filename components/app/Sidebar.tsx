@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { type MouseEvent, useEffect, useMemo, useState } from "react";
+import { type MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { getAgentPhotoByName } from "@/lib/data";
 import { sidebarNavItems } from "@/lib/navigation/sidebarNav";
@@ -79,6 +79,7 @@ const Chevron = ({ open }: { open: boolean }) => (
 );
 
 export default function Sidebar({ onHide, onSubscriptionBlocked }: SidebarProps) {
+  const router = useRouter();
   const pathname = usePathname();
   const currentPath = pathname ?? "";
   const { data } = useSession();
@@ -90,6 +91,36 @@ export default function Sidebar({ onHide, onSubscriptionBlocked }: SidebarProps)
   const [hasSubscription, setHasSubscription] = useState(sessionHasSubscription);
   const [subscriptionStatusLoaded, setSubscriptionStatusLoaded] = useState(false);
   const [subscriptionNotice, setSubscriptionNotice] = useState("");
+  const mountedRef = useRef(true);
+  const recheckInProgressRef = useRef(false);
+
+  const loadSubscriptionStatus = useCallback(async () => {
+    try {
+      const response = await fetch("/api/billing/status", { cache: "no-store" });
+      if (!response.ok) {
+        if (mountedRef.current) {
+          setSubscriptionStatusLoaded(true);
+        }
+        return "error" as const;
+      }
+
+      const payload = await response.json();
+      if (!mountedRef.current) {
+        return "error" as const;
+      }
+
+      const nextHasSubscription = Boolean(payload?.hasSubscription);
+      setHasSubscription(nextHasSubscription);
+      setSubscriptionStatusLoaded(true);
+
+      return nextHasSubscription ? ("active" as const) : ("inactive" as const);
+    } catch {
+      if (mountedRef.current) {
+        setSubscriptionStatusLoaded(true);
+      }
+      return "error" as const;
+    }
+  }, []);
 
   useEffect(() => {
     const load = async () => {
@@ -111,24 +142,25 @@ export default function Sidebar({ onHide, onSubscriptionBlocked }: SidebarProps)
   }, []);
 
   useEffect(() => {
-    let active = true;
-    const loadSubscriptionStatus = async () => {
-      try {
-        const response = await fetch("/api/billing/status", { cache: "no-store" });
-        if (!response.ok) return;
-        const payload = await response.json();
-        if (!active) return;
-        setHasSubscription(Boolean(payload?.hasSubscription));
-        setSubscriptionStatusLoaded(true);
-      } catch {
-        if (!active) return;
-        setSubscriptionStatusLoaded(true);
-      }
-    };
+    void loadSubscriptionStatus();
+  }, [loadSubscriptionStatus]);
 
-    loadSubscriptionStatus();
+  useEffect(() => {
+    const refresh = () => {
+      void loadSubscriptionStatus();
+    };
+    window.addEventListener("focus", refresh);
+    window.addEventListener("agentos:subscription-changed", refresh as EventListener);
+
     return () => {
-      active = false;
+      window.removeEventListener("focus", refresh);
+      window.removeEventListener("agentos:subscription-changed", refresh as EventListener);
+    };
+  }, [loadSubscriptionStatus]);
+
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
     };
   }, []);
 
@@ -140,14 +172,39 @@ export default function Sidebar({ onHide, onSubscriptionBlocked }: SidebarProps)
   const effectiveHasSubscription = subscriptionStatusLoaded
     ? hasSubscription
     : sessionHasSubscription;
-  const shouldBlockNav = !effectiveHasSubscription;
+  const shouldBlockNav = subscriptionStatusLoaded ? !effectiveHasSubscription : false;
   const ensureSubscriptionFor = (event: MouseEvent, href: string) => {
     const isBilling = href === "/billing" || href.startsWith("/billing/");
     if (!isBilling && shouldBlockNav) {
       event.preventDefault();
-      const message = "Подписки нет. Оплатите подписку в разделе «Биллинг».";
-      setSubscriptionNotice(message);
-      onSubscriptionBlocked?.(message);
+      if (recheckInProgressRef.current) {
+        return false;
+      }
+
+      recheckInProgressRef.current = true;
+      setSubscriptionNotice("Проверяем статус подписки...");
+
+      void (async () => {
+        const result = await loadSubscriptionStatus();
+        recheckInProgressRef.current = false;
+
+        if (result === "active") {
+          setSubscriptionNotice("");
+          router.push(href);
+          return;
+        }
+
+        if (result === "error") {
+          const message = "Не удалось проверить подписку. Обновите страницу и повторите.";
+          setSubscriptionNotice(message);
+          onSubscriptionBlocked?.(message);
+          return;
+        }
+
+        const message = "Подписки нет. Оплатите подписку в разделе «Биллинг».";
+        setSubscriptionNotice(message);
+        onSubscriptionBlocked?.(message);
+      })();
       return false;
     }
     setSubscriptionNotice("");

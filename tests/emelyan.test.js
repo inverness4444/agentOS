@@ -1,6 +1,7 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const { generateEmelyanOutput } = require("../lib/agents/emelyan");
+const { __testOnly } = require("../lib/agents/chatStore.js");
 const { unwrapData } = require("./helpers");
 
 const anatolyOutput = {
@@ -65,4 +66,34 @@ test("tone_pack mixed produces 3 sequences", async () => {
   assert.ok(hard, "hard_business sequence present");
   const offsets = hard.emails.map((email) => email.day_offset);
   assert.ok(offsets.includes(9), "breakup on day 9");
+});
+
+test("emelyan returns ready user-facing draft for CEO investments request without YAML skeleton", async () => {
+  const prompt = "напиши мне текст для CEO про инвестиции";
+  const envelope = await generateEmelyanOutput({
+    query_text: prompt,
+    task_type_requested: "pitch_text",
+    tone_pack: "mixed"
+  });
+  const output = unwrapData(envelope);
+  const rendered = __testOnly.formatOutput(output, {
+    agentName: "Емельян — Холодные письма",
+    userPrompt: prompt,
+    requestedTaskType: "pitch_text",
+    routingDecision: {
+      requestedTaskType: "pitch_text",
+      outOfRole: true
+    },
+    recommendedRouting: {
+      agentName: "Харитон — Вирусные хуки и тексты"
+    }
+  });
+
+  assert.ok(rendered.length >= 200, "user-facing draft must be substantial");
+  assert.match(rendered, /Тема:/i, "contains complete message structure");
+  assert.match(rendered, /CTA:/i, "contains explicit CTA");
+  assert.equal(/нужны данные/i.test(rendered), false, "must not ask for missing data as blocker");
+  assert.equal(/нет данных/i.test(rendered), false, "must not emit empty skeleton markers");
+  assert.equal(/пришли json/i.test(rendered), false, "must not request JSON from user");
+  assert.equal(/email sequences:/i.test(rendered), false, "must not leak YAML-like keys");
 });

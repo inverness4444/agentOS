@@ -40,6 +40,7 @@ export default function SubscriptionToggleButton({
       if (payload?.message) {
         setNotice(String(payload.message));
       }
+      window.dispatchEvent(new Event("agentos:subscription-changed"));
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Не удалось изменить подписку.");

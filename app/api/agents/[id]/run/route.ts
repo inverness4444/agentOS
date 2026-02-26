@@ -5,6 +5,7 @@ import { parseAgentConfig, serializeAgentConfig } from "@/lib/agents/config";
 import { WebClient } from "@/lib/agents/webClient.js";
 import * as runWithKnowledgeModule from "@/lib/knowledge/runWithKnowledge.js";
 import { getHandoffTypeForAgent } from "@/utils/handoff";
+import { buildUnifiedSystemPromptForAgent } from "@/lib/agents/rolePolicy.js";
 import * as platon from "@/lib/agents/platon";
 import * as anatoly from "@/lib/agents/anatoly";
 import * as timofey from "@/lib/agents/timofey";
@@ -127,6 +128,11 @@ export async function POST(
 
   const config = parseAgentConfig(agent.config, agent.name);
   const lastRun = config.last_run;
+  const runtimeSystemPrompt = buildUnifiedSystemPromptForAgent({
+    name: agent.name,
+    config,
+    systemPrompt: agent.systemPrompt
+  });
 
   let inputData = body.inputData ?? {};
   if (typeof inputData === "string") {
@@ -221,7 +227,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: platon.platonAgent.id,
-      systemPrompt: platon.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         platon.generateOutput(inputWithKnowledge, {
@@ -254,7 +260,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: anatoly.anatolyAgent.id,
-      systemPrompt: anatoly.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         anatoly.generateOutput(inputWithKnowledge, {
@@ -277,7 +283,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: timofey.timofeyAgent.id,
-      systemPrompt: timofey.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         timofey.generateOutput(inputWithKnowledge, {
@@ -308,7 +314,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: maxim.maximAgent.id,
-      systemPrompt: maxim.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         maxim.generateOutput(inputWithKnowledge, {
@@ -339,7 +345,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: fedor.fedorAgent.id,
-      systemPrompt: fedor.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         fedor.generateOutput(inputWithKnowledge, {
@@ -370,7 +376,7 @@ export async function POST(
       : null;
     const knowledgeRun = await runWithKnowledge({
       agentId: artem.artemAgent.id,
-      systemPrompt: artem.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         artem.generateOutput(inputWithKnowledge, {
@@ -398,7 +404,7 @@ export async function POST(
     const normalizedInput = leonid.normalizeInput(inputData);
     const knowledgeRun = await runWithKnowledge({
       agentId: leonid.leonidAgent.id,
-      systemPrompt: leonid.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         leonid.generateOutput(inputWithKnowledge, {
@@ -417,7 +423,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("емельян")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: emelyan.emelyanAgent.id,
-      systemPrompt: emelyan.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         emelyan.generateOutput(inputWithKnowledge, {
@@ -436,7 +442,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("борис")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: boris.borisAgent.id,
-      systemPrompt: boris.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         boris.generateOutput(inputWithKnowledge, {
@@ -455,7 +461,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("павел")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: pavel.pavelAgent.id,
-      systemPrompt: pavel.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         pavel.generateOutput(inputWithKnowledge, {
@@ -474,7 +480,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("трофим")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: trofim.trofimAgent.id,
-      systemPrompt: trofim.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         trofim.generateOutput(inputWithKnowledge, {
@@ -493,7 +499,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("ирина")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: irina.irinaAgent.id,
-      systemPrompt: irina.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         irina.generateOutput(inputWithKnowledge, {
@@ -512,7 +518,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("харитон")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: hariton.haritonAgent.id,
-      systemPrompt: hariton.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         hariton.generateOutput(inputWithKnowledge, {
@@ -531,7 +537,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("костя")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: kostya.kostyaAgent.id,
-      systemPrompt: kostya.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         kostya.generateOutput(inputWithKnowledge, {
@@ -550,7 +556,7 @@ export async function POST(
   } else if (agent.name.toLowerCase().includes("сева")) {
     const knowledgeRun = await runWithKnowledge({
       agentId: seva.sevaAgent.id,
-      systemPrompt: seva.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         seva.generateOutput(inputWithKnowledge, {
@@ -572,7 +578,7 @@ export async function POST(
   ) {
     const knowledgeRun = await runWithKnowledge({
       agentId: mitya.mityaAgent.id,
-      systemPrompt: mitya.systemPrompt,
+      systemPrompt: runtimeSystemPrompt,
       input: inputData,
       run: (inputWithKnowledge) =>
         mitya.generateOutput(inputWithKnowledge, {

@@ -8,6 +8,7 @@ type AgentHeaderProps = {
   onTogglePublished?: () => void;
   onBack?: () => void;
   tabs?: ReactNode;
+  attached?: boolean;
 };
 
 export default function AgentHeader({
@@ -17,10 +18,17 @@ export default function AgentHeader({
   published: _published,
   onTogglePublished: _onTogglePublished,
   onBack,
-  tabs: _tabs
+  tabs: _tabs,
+  attached = false
 }: AgentHeaderProps) {
   return (
-    <div className="rounded-3xl border border-slate-200/70 bg-white px-6 py-4 shadow-soft">
+    <div
+      className={
+        attached
+          ? "border-b border-slate-200/70 bg-white px-6 py-4"
+          : "rounded-3xl border border-slate-200/70 bg-white px-6 py-4 shadow-soft"
+      }
+    >
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-3">
           <button

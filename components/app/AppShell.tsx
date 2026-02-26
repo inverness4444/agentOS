@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 export default function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const routeHidesSidebar = pathname?.startsWith("/agents/") ?? false;
+  const isAgentDetailPage = pathname?.startsWith("/agents/") ?? false;
   const isBoardPage = pathname?.startsWith("/board") ?? false;
   const [sidebarHidden, setSidebarHidden] = useState(false);
   const [showSubscriptionOverlay, setShowSubscriptionOverlay] = useState(false);
@@ -59,8 +60,8 @@ export default function AppShell({ children }: { children: ReactNode }) {
         className={cn(
           "min-h-screen transition",
           showSubscriptionOverlay && "blur-[2px] pointer-events-none select-none",
-          isBoardPage ? "px-2 py-2 lg:px-4 lg:py-4" : "px-6 py-6 lg:px-10",
-          showSidebar ? "lg:ml-64" : isBoardPage ? "lg:px-4" : "lg:px-12"
+          isAgentDetailPage ? "p-0" : isBoardPage ? "px-2 py-2 lg:px-4 lg:py-4" : "px-6 py-6 lg:px-10",
+          showSidebar ? "lg:ml-64" : isBoardPage ? "lg:px-4" : isAgentDetailPage ? "" : "lg:px-12"
         )}
       >
         {children}
